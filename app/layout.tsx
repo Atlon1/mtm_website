@@ -1,10 +1,11 @@
+
 import type {Metadata} from "next";
 import {Oswald, Roboto} from "next/font/google";
 import "./globals.css";
 
 //components
-import Header from "@/component/Header";
-import Footer from "@/component/Footer";
+import Header from "../component/Header";
+import Footer from "../component/Footer";
 
 const oswald = Oswald({
     variable: "--font-oswald",
