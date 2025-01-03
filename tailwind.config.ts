@@ -21,9 +21,10 @@ export default {
             oswald: 'var(--font-oswald)',
             roboto: 'var(--font-roboto)'
         },
+
         backgroundImage: {
-            hero: "url('public/assets/img/hero/bg.png')",
-            membership: "url('public/assets/img/membership/bg.jpg')",
+            hero: "url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDI2N2RsenpybXJ1bXV4NmN2cmczcDRuMTE2djdvemcwN2VmY2RnaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DtC9tmlfGpRBuNJQzJ/giphy.webp')",
+            membership: "url('/assets/img/membership/bg.jpg')",
         },
         extend: {
             colors: {
