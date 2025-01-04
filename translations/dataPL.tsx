@@ -35,13 +35,13 @@ export const featuresAbout = [
 
 
 export const achimentsStats  = [{
-    number: 10,
+    number: 15,
     icon: <FaBriefcase/>,
     text: "Years of Experience"
 }, {
     number: 879,
     icon: <FaClock/>,
-    text: "Trained Engineers"
+    text: "Hours of Training"
 }, {
     number: 150,
     icon: <ImUsers/>,
@@ -51,4 +51,12 @@ export const achimentsStats  = [{
     icon: <FaTrophy/>,
     text: "international awards"
 }
+]
+
+export const classesVariants = [
+    {
+        name:'Milling CNC',
+        img: '/asssets/img/classes/bodybuilding.jpg',
+        description: 'We have top-class equipment that will meet the expectations of every customer. We make parts for Injection Molds, Automive, parts used in the aviation industry.',
+    }
 ]
