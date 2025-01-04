@@ -1,9 +1,43 @@
-import React from 'react';
+'use client';
+
+import {motion} from "framer-motion";
+import {fadeIn} from "../lib/variants";
+import {featuresAbout} from "../translations/dataPL";
+import Interceptors from "undici-types/interceptors";
+import Achivments from "./Achivments";
+
+
 
 const About = () => {
     return (
-        <section className='h-screen bg-yellow-300' id='about'>
-           About
+        <section className='pt-8 pb14 lg:pt-16 lg:pb-28 pb-12' id='about'>
+           <div className='container mx-auto'>
+               <div className='flex flex-col items-center gap-2 mb-8'>
+                   <h2 className='h2 text-center'>
+                       About us
+                   </h2>
+                   <p2 className='max-w-[600px] mx-auto text-center'>
+                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                   </p2>
+               </div>
+               <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-16'>
+                   {featuresAbout.map((feature, index) => {
+                    return (
+                        <div className='flex flex-col justify-center items-center gap-4 border p-10' key={index}>
+                            <div className='text-4xl bg-primary-300 text-white w-[80px] h-[80px] rounded-full flex justify-center items-center'>{feature.icon}</div>
+                            <div className='flex flex-col items-center justify-center gap-2 text-center'>
+                                <h4 className='h4 text-accent'>{feature.title}</h4>
+                                <p>{feature.subtitle}</p>
+                            </div>
+                        </div>
+                    )
+                   })}
+               </div>
+                <Achivments/>
+               <div>
+                   Test
+               </div>
+           </div>
         </section>
     );
 };
