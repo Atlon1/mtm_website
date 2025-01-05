@@ -56,7 +56,24 @@ export const achimentsStats  = [{
 export const classesVariants = [
     {
         name:'Milling CNC',
-        img: '/asssets/img/classes/bodybuilding.jpg',
-        description: 'We have top-class equipment that will meet the expectations of every customer. We make parts for Injection Molds, Automive, parts used in the aviation industry.',
+        img: '/assets/img/classes/millingcnc.jpeg',
+        description: 'CNC milling (Computerized Numerical Control) is one of the types of metalworking. It involves cutting with a multi-blade tool called a milling cutter on a numerically controlled machine tool, called a CNC milling machine. The entire milling process consists of the tool performing the rotary movement, while the workpiece or the tool performs the feed movement. Depending on how the axis of rotation of the milling cutter is positioned in relation to the surface being machined, peripheral and face milling are distinguished. Depending on the feed movement in relation to the working movement, concurrent and counter-rotating milling are distinguished.',
+    },
+    {
+        name:'Turning CNC',
+        img: '/assets/img/classes/turningcnc.webp',
+        description: 'In the case of turning, the processed material rotates around its own axis, while the cutting tool moves relative to it, shaping the object according to the established parameters.\n' +
+            '\n' +
+            'Because lathes are computer-controlled, this allows for excellent precision and repeatability of the process.',
+    },
+    {
+        name:'Griding',
+        img: '/assets/img/classes/griding.jpg',
+        description: 'Surface grinding is one of the elements that complete the production process of a given element, and its purpose is to bring the product to a very precise shape and dimension compliance.',
+    },
+    {
+        name:'Project Engineering',
+        img: '/assets/img/classes/pengenering.jpg',
+        description: 'If you need new equipment, leave it to us. We will design new equipment and make it.',
     }
 ]
