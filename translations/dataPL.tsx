@@ -8,10 +8,8 @@ export const links = [
     {name: 'Home', target: 'home', offset: -101},
     {name: 'About', target: 'about', offset: -81},
     {name: 'Classes', target: 'classes', offset: -81},
-    {name: 'Team', target: 'team', offset: -1},
+    {name: 'Brands', target: 'brands', offset: -81},
     {name: 'prices', target: 'prices', offset: -41},
-    {name: 'Testimonial', target: 'testimonial', offset: -1},
-    {name: 'Blog', target: 'blog', offset: -1},
     {name: 'Contact', target: 'contact', offset: -101},
 ]
 
@@ -34,7 +32,7 @@ export const featuresAbout = [
 ]
 
 
-export const achimentsStats  = [{
+export const achimentsStats = [{
     number: 15,
     icon: <FaBriefcase/>,
     text: "Years of Experience"
@@ -55,25 +53,43 @@ export const achimentsStats  = [{
 
 export const classesVariants = [
     {
-        name:'Milling CNC',
+        name: 'Milling CNC',
         img: '/assets/img/classes/millingcnc.jpeg',
         description: 'CNC milling (Computerized Numerical Control) is one of the types of metalworking. It involves cutting with a multi-blade tool called a milling cutter on a numerically controlled machine tool, called a CNC milling machine. The entire milling process consists of the tool performing the rotary movement, while the workpiece or the tool performs the feed movement. Depending on how the axis of rotation of the milling cutter is positioned in relation to the surface being machined, peripheral and face milling are distinguished. Depending on the feed movement in relation to the working movement, concurrent and counter-rotating milling are distinguished.',
     },
     {
-        name:'Turning CNC',
+        name: 'Turning CNC',
         img: '/assets/img/classes/turningcnc.webp',
         description: 'In the case of turning, the processed material rotates around its own axis, while the cutting tool moves relative to it, shaping the object according to the established parameters.\n' +
             '\n' +
             'Because lathes are computer-controlled, this allows for excellent precision and repeatability of the process.',
     },
     {
-        name:'Griding',
+        name: 'Griding',
         img: '/assets/img/classes/griding.jpg',
         description: 'Surface grinding is one of the elements that complete the production process of a given element, and its purpose is to bring the product to a very precise shape and dimension compliance.',
     },
     {
-        name:'Project Engineering',
+        name: 'Project Engineering',
         img: '/assets/img/classes/pengenering.jpg',
         description: 'If you need new equipment, leave it to us. We will design new equipment and make it.',
+    }
+]
+
+export const brands = [{
+    src: '/assets/img/brands/brand-1.png',
+    alt: '/'
+},
+    {
+        src: '/assets/img/brands/brand-2.png',
+        alt: '/'
+    },
+    {
+        src: '/assets/img/brands/Brand-3.jpg',
+        alt: '/'
+    },
+    {
+        src: '/assets/img/brands/brand-5.png',
+        alt: '/'
     }
 ]
