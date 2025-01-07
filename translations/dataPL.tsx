@@ -2,6 +2,7 @@ import {FaBriefcase, FaClock, FaTrophy, FaUsers} from "react-icons/fa";
 import {IoIosPricetag} from "react-icons/io";
 import {MdStorage} from "react-icons/md";
 import {ImUsers} from "react-icons/im";
+import {FaCheck} from "react-icons/fa6";
 
 
 export const links = [
@@ -91,5 +92,67 @@ export const brands = [{
     {
         src: '/assets/img/brands/brand-5.png',
         alt: '/'
+    }
+]
+
+export const membershipData = [{
+    title: 'Milling CNC',
+    Price: '30',
+    benefits: [
+        {
+            icon: <FaCheck/>,
+            text: '10 hours of training'
+        },
+        {
+            icon: <FaCheck/>,
+            text: '10 hours of training'
+        }, {
+            icon: <FaCheck/>,
+            text: '10 hours of training'
+        }, {
+            icon: <FaCheck/>,
+            text: '10 hours of training'
+        }
+    ]
+},
+    {
+        title: 'Turning CNC',
+        Price: '30',
+        benefits: [
+            {
+                icon: <FaCheck/>,
+                text: '10 hours of training'
+            },
+            {
+                icon: <FaCheck/>,
+                text: '10 hours of training'
+            }, {
+                icon: <FaCheck/>,
+                text: '10 hours of training'
+            }, {
+                icon: <FaCheck/>,
+                text: '10 hours of training'
+            }
+        ]
+    },
+    {
+        title: 'Griding',
+        Price: '30',
+        benefits: [
+            {
+                icon: <FaCheck/>,
+                text: '10 hours of training'
+            },
+            {
+                icon: <FaCheck/>,
+                text: '10 hours of training'
+            }, {
+                icon: <FaCheck/>,
+                text: '10 hours of training'
+            }, {
+                icon: <FaCheck/>,
+                text: '10 hours of training'
+            }
+        ]
     }
 ]
