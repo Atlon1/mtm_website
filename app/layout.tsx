@@ -9,7 +9,7 @@ import Footer from "../component/Footer";
 
 const oswald = Oswald({
     variable: "--font-oswald",
-    weights: ["300", "400", "500", "600", "700"],
+    weight: ["300", "400", "500", "600", "700"],
     subsets: ["latin"],
 });
 
