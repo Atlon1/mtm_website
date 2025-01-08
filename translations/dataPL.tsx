@@ -156,3 +156,24 @@ export const membershipData = [{
         ]
     }
 ]
+
+export const contactPl = {
+
+    nameValidation: {
+        name: 'Pole nie może być puste!',
+        nameLength: 'Imię musi zawierać co najmniej 2 znaki!',
+    },
+    emailValidation: {
+        email: 'Podany email jest nieprawidłowy!',
+        emailFormat: 'Zły e-mail!',
+    },
+    textValidation: {
+        text: 'Pole nie może być puste!',
+        textLength: 'Wiadomość musi zawierać co najmniej 40 znaków!',
+    },
+
+
+    thxText: 'Wiadomość została wysłana!. Dziękuje!',
+    singleWord: ['Get in Touch', 'Zacznijmy pracę', 'razem!', 'Wyślij wiadomość!', 'Twoje Dane:', 'Adres email:', 'Wiadomość'],
+
+}
