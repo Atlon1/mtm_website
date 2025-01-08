@@ -3,9 +3,8 @@
 import {motion} from "framer-motion";
 import {fadeIn} from "../lib/variants";
 import {featuresAbout} from "../translations/dataPL";
-import Interceptors from "undici-types/interceptors";
 import Achivments from "./Achivments";
-
+import {AboutStatsPL} from "../translations/dataPL";
 
 
 const About = () => {
@@ -19,7 +18,7 @@ const About = () => {
                        whileInView='show'
                        viewport={{once: false, amount: 0.2}}
                        className='h2 text-center'>
-                       About us
+                       {AboutStatsPL[0].singleWord}
                    </motion.h2>
                    <motion.p
                        variants={fadeIn('up', 0.6)}
@@ -27,7 +26,7 @@ const About = () => {
                        whileInView='show'
                        viewport={{once: false, amount: 0.2}}
                        className='max-w-[600px] mx-auto text-center'>
-                       We are a young company, but the people who work within the structure have many years of experience in the industry. We do the following types of processing: Milling, Turning, Grinding.
+                       {AboutStatsPL[0].Title}
                    </motion.p>
                </div>
                <motion.div

@@ -6,10 +6,11 @@ import 'swiper/css';
 
 import 'swiper/css/pagination';
 import CustomButton from "./CustomButton";
-import SwiperNavButtons from "./SwiperNavButtons";
 import {motion} from 'framer-motion';
 import {fadeIn} from "../lib/variants";
 import {Autoplay} from "swiper/modules";
+import {heroData} from "../translations/dataPL";
+import {Link as ScrollLink} from 'react-scroll'
 
 const HeroSlider = () => {
     return (
@@ -33,7 +34,7 @@ const HeroSlider = () => {
                             whileInView={'show'}
                             viewport={{once: false, amount: 0.2}}
                             className='h1 text-center lg:text-left mb-2'>
-                            <span className='text-accent'>Turnning CNC</span> high quality
+                            <span className='text-accent'>{heroData[0].title}</span> {heroData[0].subtitle}
                         </motion.h1>
                         <motion.p
                             variants={fadeIn('up', 0.6)}
@@ -41,8 +42,7 @@ const HeroSlider = () => {
                             whileInView={'show'}
                             viewport={{once: false, amount: 0.2}}
                             className='text-white italic text-center lg:text-left mb-4'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
+                            {heroData[0].text}
                         </motion.p>
                         <motion.div
                             variants={fadeIn('up', 0.8)}
@@ -50,7 +50,16 @@ const HeroSlider = () => {
                             whileInView={'show'}
                             viewport={{once: false, amount: 0.2}}
                         >
-                            <CustomButton text='Get Started' containerStyles='w-[196px] h-[62px]'/>
+                            <ScrollLink
+                                offset={-101}
+                                to='contact'
+                                smooth
+                                spy
+                                activeClass='active'
+                                className='cursor-pointer hover:text-accent transition-all'
+                            >
+                                <CustomButton text={heroData[3].title} containerStyles='w-[196px] h-[62px]'/>
+                            </ScrollLink>
                         </motion.div>
 
                     </div>
@@ -66,7 +75,7 @@ const HeroSlider = () => {
                             whileInView={'show'}
                             viewport={{once: false, amount: 0.2}}
                             className='h1 text-center lg:text-left mb-2'>
-                            <span className='text-accent'>Milling CNC</span> High Prcecision
+                            <span className='text-accent'>{heroData[1].title}</span> {heroData[1].subtitle}
                         </motion.h1>
                         <motion.p
                             variants={fadeIn('up', 0.6)}
@@ -74,8 +83,7 @@ const HeroSlider = () => {
                             whileInView={'show'}
                             viewport={{once: false, amount: 0.2}}
                             className='text-white italic text-center lg:text-left mb-4'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
+                            {heroData[1].text}
                         </motion.p>
                         <motion.div
                             variants={fadeIn('up', 0.8)}
@@ -83,7 +91,16 @@ const HeroSlider = () => {
                             whileInView={'show'}
                             viewport={{once: false, amount: 0.2}}
                         >
-                            <CustomButton text='Get Started' containerStyles='w-[196px] h-[62px]'/>
+                            <ScrollLink
+                                offset={-101}
+                                to='contact'
+                                smooth
+                                spy
+                                activeClass='active'
+                                className='cursor-pointer hover:text-accent transition-all'
+                            >
+                                <CustomButton text={heroData[3].title} containerStyles='w-[196px] h-[62px]'/>
+                            </ScrollLink>
                         </motion.div>
 
                     </div>
@@ -99,7 +116,7 @@ const HeroSlider = () => {
                             whileInView={'show'}
                             viewport={{once: false, amount: 0.2}}
                             className='h1 text-center lg:text-left mb-2'>
-                            <span className='text-accent'>Griding</span> all surface
+                            <span className='text-accent'>{heroData[2].title}</span> {heroData[2].subtitle}
                         </motion.h1>
                         <motion.p
                             variants={fadeIn('up', 0.6)}
@@ -107,8 +124,7 @@ const HeroSlider = () => {
                             whileInView={'show'}
                             viewport={{once: false, amount: 0.2}}
                             className='text-white italic text-center lg:text-left mb-4'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
+                            {heroData[2].text}
                         </motion.p>
                         <motion.div
                             variants={fadeIn('up', 0.8)}
@@ -116,7 +132,16 @@ const HeroSlider = () => {
                             whileInView={'show'}
                             viewport={{once: false, amount: 0.2}}
                         >
-                            <CustomButton text='Get Started' containerStyles='w-[196px] h-[62px]'/>
+                            <ScrollLink
+                                offset={-101}
+                                to='contact'
+                                smooth
+                                spy
+                                activeClass='active'
+                                className='cursor-pointer hover:text-accent transition-all'
+                            >
+                                <CustomButton text={heroData[3].title} containerStyles='w-[196px] h-[62px]'/>
+                            </ScrollLink>
                         </motion.div>
 
                     </div>

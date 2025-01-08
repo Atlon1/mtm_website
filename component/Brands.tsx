@@ -4,6 +4,7 @@ import {brands} from "../translations/dataPL";
 import {motion} from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import {brandsDataPl} from "../translations/dataPL";
 
 
 const brandContainerVariants = {
@@ -40,7 +41,7 @@ const Brands = () => {
                 whileInView={'show'}
                 viewport={{once: false, amount: 0.3}}
                 className="conatiner mx-auto">
-                <h2 className='h2 text-center mb-8'>Brands</h2>
+                <h2 className='h2 text-center mb-8'>{brandsDataPl.brand}</h2>
                 <motion.div
                     variants={brandContainerVariants}
                     initial='hidden'

@@ -11,7 +11,7 @@ import {FaRegClock} from 'react-icons/fa'
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { BsTelephoneForward } from "react-icons/bs";
 import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa6";
-import Achivments from "./Achivments";
+import {Link as ScrollLink} from 'react-scroll'
 
 
 
@@ -62,9 +62,16 @@ const Header = () => {
                 </div>
             </div>
             <div className="container mx-a h-full flex items-center justify-between">
-                <Link href=''>
+                <ScrollLink
+                    offset={-101}
+                    to='home'
+                    smooth
+                    spy
+                    activeClass='active'
+                    className='cursor-pointer hover:text-accent transition-all'
+                >
                     <Image src={'/assets/img/Logo_bezTła.png'} width={180} height={70} alt='Logo'/>
-                </Link>
+                </ScrollLink>
                 <MobileNav
                     containerStyle={`${headerActive ? 'top-[80px]' : 'top-[120px]'} ${openNav ? 'max-h-max pt-8 pb-10 border-t border-white/10' : 'max-h-0 pt-0 pb-0 overflow-hidden border-white/0'} text-white flex flex-col text-center gap-8 fixed bg-primary-200 w-full left-0 top-[120px] text-base uppercase font-medium transition-all xl:hidden`}/>
                 <Nav containerStyle='flex gap-4 text-white hidden xl:flex'/>

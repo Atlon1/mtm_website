@@ -1,12 +1,14 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
+import {Link as ScrollLink} from 'react-scroll'
 import {useState, useEffect, useRef} from 'react'
 
 import {FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaFacebook, FaLinkedin, FaYoutube} from "react-icons/fa";
-import {contactPl} from "../translations/dataPL";
-import CustomButton from "./CustomButton";
+import {contactPl, contactUsPl} from "../translations/dataPL";
+
 import {motion} from "framer-motion";
+
 
 
 const footerContainerVariants = {
@@ -134,20 +136,27 @@ const Footer = () => {
                     initial='hidden'
                     whileInView={'show'}
                     viewport={{once: false, amount: 0.3}}
-                    className='text-white grid grid-cols-1 xl:grid-cols-4 m-8 gap-8'>
+                    className='text-white grid grid-cols-1 xl:grid-cols-2 m-8 gap-8'>
                     <motion.div
                         variants={footerItemVariants}
                         className='flex flex-col gap-4'>
-                        <Link href='#'>
+                        <ScrollLink
+                            offset={-101}
+                            to='home'
+                            smooth
+                            spy
+                            activeClass='active'
+                            className='cursor-pointer hover:text-accent transition-all'
+                        >
                             <Image
                                 src={'/assets/img/Logo_bezTła.png'}
                                 alt={'logo'}
-                                width={117}
-                                height={55}
+                                width={400}
+                                height={200}
                             />
-                        </Link>
+                        </ScrollLink>
                         <p className='max-w-sm'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            {contactUsPl.description}
                         </p>
                         <ul className='flex flex-col gap-4'>
                             <li className='flex items-center gap-4'>
@@ -171,6 +180,7 @@ const Footer = () => {
                                 </Link>
                             </li>
                         </ul>
+
                     </motion.div>
                     <motion.div
                         variants={footerItemVariants}

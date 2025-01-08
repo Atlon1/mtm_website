@@ -3,6 +3,7 @@
 import {motion} from "framer-motion";
 import {fadeIn} from "../lib/variants";
 import MembershipSlider from "./MembershipSlider";
+import {membershipData2PL} from "../translations/dataPL";
 
 const MemberShip = () => {
     return (
@@ -17,7 +18,7 @@ const MemberShip = () => {
                     variants={fadeIn('up', 0.4)}
                     initial='hidden'
                     whileInView={'show'}
-                    className='h2 text-white text-center mb-8'>Membership</motion.h2>
+                    className='h2 text-white text-center mb-8'>{membershipData2PL.title}</motion.h2>
                 <motion.div
                 variants={fadeIn('up', 0.6)}
                 initial='hidden'

@@ -6,74 +6,174 @@ import {FaCheck} from "react-icons/fa6";
 
 
 export const links = [
-    {name: 'Home', target: 'home', offset: -101},
-    {name: 'About', target: 'about', offset: -81},
-    {name: 'Classes', target: 'classes', offset: -81},
-    {name: 'Brands', target: 'brands', offset: -81},
-    {name: 'prices', target: 'prices', offset: -41},
-    {name: 'Contact', target: 'contact', offset: -101},
+    {name: 'Start', target: 'home', offset: -101},
+    {name: 'O nas', target: 'about', offset: -81},
+    {name: 'Usługi', target: 'prices', offset: -41},
+    {name: 'Marki', target: 'brands', offset: -81},
+    {name: 'Czym sie zajmujemy', target: 'classes', offset: -81},
+    {name: 'Kontakt', target: 'contact', offset: -101},
 ]
+
+
 
 export const featuresAbout = [
     {
         icon: <FaUsers/>,
-        title: "Qualified engineering",
-        subtitle: "People with extensive experience will advise on every issue, in terms of optimization, costs, and will propose the best solution for you.",
+        title: "Wykfalifikowanie inżynierowie",
+        subtitle: "Ludzie z bogatym doświadczeniem doradzą w każdej kwestii pod kątem optymalizacji, kosztów oraz zaproponują najlepsze dla Ciebie rozwiązanie.",
     },
     {
         icon: <IoIosPricetag/>,
-        title: "Prices",
-        subtitle: "We will adjust the price to your needs and ensure on-time shipping.",
+        title: "Ceny",
+        subtitle: "Dostosujemy cenę do Twoich potrzeb i zapewnimy terminową dostawę.",
     },
     {
         icon: <MdStorage/>,
-        title: "Equipment",
-        subtitle: "We have top-class equipment that will meet the expectations of every customer. We make parts for Injection Molds, Automive, parts used in the aviation industry.",
+        title: "Sprzęt",
+        subtitle: "Posiadamy najwyższej klasy sprzęt, który spełni oczekiwania każdego klienta. Wykonujemy części do form wtryskowych, motoryzacyjnych, części używane w przemyśle lotniczym.",
     }
 ]
 
+export const heroData = [{
+    title: "Frezowanie CNC",
+    subtitle: "Wysoka Precyzja",
+    text: "Posiadamy wieloletnie doświadczenie w tej dziedzinie."
+},
+    {
+        title: "Toczenie CNC",
+        subtitle: "Wysoka jakość",
+        text: "Rozwiązania atrakcyjne cenowo."
+    },
+    {
+        title: "Szlifowanie",
+        subtitle: "Wysoka dokładność",
+        text: "Zatrudniamy specjalistów w tej dziedzinie."
+    },
+    {
+        title: "Zacznij z nami!",
+        subtitle: "Wysoka jakść",
+        text: "Zatrudniamy specjalistów w tej dziedzinie."
+    }
+]
+
+export const AboutStatsPL = [{
+    singleWord: 'O nas',
+    Title: 'Jesteśmy młodą firmą, ale ludzie pracujący w strukturze mają wieloletnie doświadczenie w branży. Wykonujemy następujące rodzaje obróbki: Frezowanie, Toczenie, Szlifowanie.'
+}]
 
 export const achimentsStats = [{
     number: 15,
     icon: <FaBriefcase/>,
-    text: "Years of Experience"
+    text: "Lata doswiadczenia"
 }, {
     number: 879,
     icon: <FaClock/>,
-    text: "Hours of Training"
+    text: "Czas pracy"
 }, {
     number: 150,
     icon: <ImUsers/>,
-    text: "Happy Customers"
+    text: "Zadowoleni klienci"
 }, {
     number: 15,
     icon: <FaTrophy/>,
-    text: "international awards"
+    text: "Zakończone projekty"
 }
 ]
 
+
+export const membershipData = [{
+    title: 'Frezowanie CNC',
+    Price: '120',
+    benefits: [
+        {
+            icon: <FaCheck/>,
+            text: 'Frezowanie CNC, w 3 osich'
+        },
+        {
+            icon: <FaCheck/>,
+            text: 'Frezowanie CNC, w 4 osiach'
+        }, {
+            icon: <FaCheck/>,
+            text: 'Frezowanie CNC, w 5 osiach'
+        }, {
+            icon: <FaCheck/>,
+            text: 'Maksymalny zakres prac: 500x500x400'
+        }
+    ]
+},
+    {
+        title: 'Toczenie CNC',
+        Price: '120',
+        benefits: [
+            {
+                icon: <FaCheck/>,
+                text: 'Toczenie w zakresie: Fi800x1500'
+            },
+            {
+                icon: <FaCheck/>,
+                text: 'Toczenie elementów do form wtryskowych'
+            }, {
+                icon: <FaCheck/>,
+                text: 'Toczenie elementów dla Budowy maszyn'
+            }, {
+                icon: <FaCheck/>,
+                text: 'Toczenie trudno obrabialnych materiałów'
+            }
+        ]
+    },
+    {
+        title: 'Szlifowanie',
+        Price: '100',
+        benefits: [
+            {
+                icon: <FaCheck/>,
+                text: 'Szlifowanie w zakresie 300x1200x400'
+            },
+            {
+                icon: <FaCheck/>,
+                text: 'Szlifowanie elementów do form wtrysknych'
+            }, {
+                icon: <FaCheck/>,
+                text: 'Szlifowanie elementów do budowy maszyn'
+            }, {
+                icon: <FaCheck/>,
+                text: 'Szlifowanie trudnych materiałów dla przemysłu spożywczego'
+            }
+        ]
+    },
+]
+
+export const membershipData2PL = {
+    title: 'Cennik',
+    subtitle: '/h',
+    value: 'PLN',
+    button: 'Zapytaj o szczegóły'
+}
+
+export const brandsDataPl = {
+    brand: 'Znane Marki',
+}
+
 export const classesVariants = [
     {
-        name: 'Milling CNC',
+        name: 'Frezowanie CNC',
         img: '/assets/img/classes/millingcnc.jpeg',
-        description: 'CNC milling (Computerized Numerical Control) is one of the types of metalworking. It involves cutting with a multi-blade tool called a milling cutter on a numerically controlled machine tool, called a CNC milling machine. The entire milling process consists of the tool performing the rotary movement, while the workpiece or the tool performs the feed movement. Depending on how the axis of rotation of the milling cutter is positioned in relation to the surface being machined, peripheral and face milling are distinguished. Depending on the feed movement in relation to the working movement, concurrent and counter-rotating milling are distinguished.',
+        description: 'Frezowanie CNC (Computerized Numerical Control) jest jednym z rodzajów obróbki metali. Polega na cięciu wieloostrzowym narzędziem zwanym frezem na obrabiarce sterowanej numerycznie, zwanej frezarką CNC. Cały proces frezowania polega na tym, że narzędzie wykonuje ruch obrotowy, podczas gdy przedmiot obrabiany lub narzędzie wykonuje ruch posuwowy. W zależności od tego, jak oś obrotu frezu jest ustawiona względem obrabianej powierzchni, rozróżnia się frezowanie obwodowe i czołowe. W zależności od ruchu posuwowego względem ruchu roboczego rozróżnia się frezowanie współbieżne i przeciwbieżne.'
     },
     {
-        name: 'Turning CNC',
+        name: 'Toczenie CNC',
         img: '/assets/img/classes/turningcnc.webp',
-        description: 'In the case of turning, the processed material rotates around its own axis, while the cutting tool moves relative to it, shaping the object according to the established parameters.\n' +
-            '\n' +
-            'Because lathes are computer-controlled, this allows for excellent precision and repeatability of the process.',
+        description: 'W przypadku toczenia, obrabiany materiał obraca się wokół własnej osi, podczas gdy narzędzie skrawające porusza się względem niej, kształtując przedmiot według ustalonych parametrów. Dzięki sterowaniu komputerowemu tokarkami można uzyskać doskonałą precyzję i powtarzalność procesu.'
     },
     {
-        name: 'Griding',
+        name: 'Szlifowanie',
         img: '/assets/img/classes/griding.jpg',
-        description: 'Surface grinding is one of the elements that complete the production process of a given element, and its purpose is to bring the product to a very precise shape and dimension compliance.',
+        description: 'Szlifowanie powierzchni jest jednym z elementów kończących proces produkcyjny danego elementu i ma na celu nadanie produktowi bardzo precyzyjnego kształtu i wymiarów.',
     },
     {
-        name: 'Project Engineering',
+        name: 'Projektowanie i optymalizacja',
         img: '/assets/img/classes/pengenering.jpg',
-        description: 'If you need new equipment, leave it to us. We will design new equipment and make it.',
+        description: 'Jeśli potrzebujesz nowego sprzętu, zostaw to nam. Zaprojektujemy nowy sprzęt i go wykonamy.',
     }
 ]
 
@@ -95,67 +195,7 @@ export const brands = [{
     }
 ]
 
-export const membershipData = [{
-    title: 'Milling CNC',
-    Price: '30',
-    benefits: [
-        {
-            icon: <FaCheck/>,
-            text: '10 hours of training'
-        },
-        {
-            icon: <FaCheck/>,
-            text: '10 hours of training'
-        }, {
-            icon: <FaCheck/>,
-            text: '10 hours of training'
-        }, {
-            icon: <FaCheck/>,
-            text: '10 hours of training'
-        }
-    ]
-},
-    {
-        title: 'Turning CNC',
-        Price: '30',
-        benefits: [
-            {
-                icon: <FaCheck/>,
-                text: '10 hours of training'
-            },
-            {
-                icon: <FaCheck/>,
-                text: '10 hours of training'
-            }, {
-                icon: <FaCheck/>,
-                text: '10 hours of training'
-            }, {
-                icon: <FaCheck/>,
-                text: '10 hours of training'
-            }
-        ]
-    },
-    {
-        title: 'Griding',
-        Price: '30',
-        benefits: [
-            {
-                icon: <FaCheck/>,
-                text: '10 hours of training'
-            },
-            {
-                icon: <FaCheck/>,
-                text: '10 hours of training'
-            }, {
-                icon: <FaCheck/>,
-                text: '10 hours of training'
-            }, {
-                icon: <FaCheck/>,
-                text: '10 hours of training'
-            }
-        ]
-    }
-]
+
 
 export const contactPl = {
 
@@ -175,5 +215,7 @@ export const contactPl = {
 
     thxText: 'Wiadomość została wysłana!. Dziękuje!',
     singleWord: ['Get in Touch', 'Zacznijmy pracę', 'razem!', 'Wyślij wiadomość!', 'Twoje Dane:', 'Adres email:', 'Wiadomość'],
-
+}
+export const contactUsPl = {
+    description: "Zapraszamy do współpracy!"
 }

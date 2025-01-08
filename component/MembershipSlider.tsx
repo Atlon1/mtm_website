@@ -1,10 +1,9 @@
 'use client';
 
-import Image from "next/image";
 
+import {Link as ScrollLink} from 'react-scroll'
 import CustomButton from "./CustomButton";
-import {membershipData} from "../translations/dataPL";
-
+import {membershipData, membershipData2PL} from "../translations/dataPL";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Pagination} from "swiper/modules";
 
@@ -51,11 +50,20 @@ const MembershipSlider = () => {
                                     })}
                                 </ul>
                                 <p className='text-accent mb-8 flex gap-1 items-center'>
-                                    <sup className='text-4xl'>$</sup>
+                                    <sup className='text-4xl'>{membershipData2PL.value}</sup>
                                     <strong className='text-6xl'>{item.Price}</strong>
-                                    <em className='self-end text-2xl'>/hour</em>
+                                    <em className='self-end text-2xl'>{membershipData2PL.subtitle}</em>
                                 </p>
-                                <CustomButton text='Buy now' containerStyles='w-[196px] h-[60px]'/>
+                                <ScrollLink
+                                    offset={-101}
+                                    to='contact'
+                                    smooth
+                                    spy
+                                    activeClass='active'
+                                    className='cursor-pointer hover:text-accent transition-all'
+                                >
+                                    <CustomButton text={membershipData2PL.button} containerStyles='w-[196px] h-[60px]'/>
+                                </ScrollLink>
                             </div>
                         </div>
                     </SwiperSlide>

@@ -13,10 +13,9 @@ export default function Home() {
         <main>
             <Hero/>
             <About/>
-            <Classes/>
-            <Brands/>
             <MemberShip/>
-            {/*<div className='h-[3000px]'></div>*/}
+            <Brands/>
+            <Classes/>
         </main>
     );
 }
