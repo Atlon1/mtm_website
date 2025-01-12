@@ -214,7 +214,7 @@ export const contactPl = {
 
 
     thxText: 'Wiadomość została wysłana!. Dziękuje!',
-    singleWord: ['Get in Touch', 'Zacznijmy pracę', 'razem!', 'Wyślij wiadomość!', 'Twoje Dane:', 'Adres email:', 'Wiadomość'],
+    singleWord: ['Get in Touch', 'Zacznijmy pracę', 'razem!', 'Wyślij wiadomość!', 'Twoje Dane:', 'Adres email:', 'Wiadomość', "Napisz do nas!"],
 }
 export const contactUsPl = {
     description: "Zapraszamy do współpracy!"

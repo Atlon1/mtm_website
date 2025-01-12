@@ -8,6 +8,8 @@ import {FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaFacebook, FaLinkedin, FaYoutub
 import {contactPl, contactUsPl} from "../translations/dataPL";
 
 import {motion} from "framer-motion";
+import MapComponent from "./Map";
+
 
 
 
@@ -163,7 +165,7 @@ const Footer = () => {
                         <ul className='flex flex-col gap-4'>
                             <li className='flex items-center gap-4'>
                                 <FaMapMarkerAlt className='text-xl text-accent'/>
-                                <span>Nowy Tomyśl, ul. Marszałka Piłusudskiego 26 Poland</span>
+                                <span>Nowy Tomyśl 64-300, ul. Marszałka Józefa Piłsudskiego 26, Poland</span>
                             </li>
                             <li>
                                 <Link
@@ -182,11 +184,12 @@ const Footer = () => {
                                 </Link>
                             </li>
                         </ul>
-
                     </motion.div>
+                    <MapComponent/>
                     <motion.div
                         variants={footerItemVariants}
                         className='flex flex-col'>
+                        <h2>{singleWord[7]}</h2>
                         <form
                             className='flex-1 rounded-2xl flex flex-col gap-y-6 items-start'
                             ref={formData}
