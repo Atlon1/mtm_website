@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {Link as ScrollLink} from 'react-scroll'
 import {useState, useEffect, useRef} from 'react'
-
+import emailjs from '@emailjs/browser'
 import {FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaFacebook, FaLinkedin, FaYoutube} from "react-icons/fa";
 import {contactPl, contactUsPl} from "../translations/dataPL";
 
@@ -41,7 +41,7 @@ const footerItemVariants = {
 
 const Footer = () => {
     const {thxText, singleWord, nameValidation, textValidation, emailValidation} = contactPl
-
+    const formData = useRef()
 
     const validateName = (form: any) => {
         const {name, nameLength} = nameValidation
@@ -98,7 +98,7 @@ const Footer = () => {
         })
     }
 
-    const handleSendMessage = async (e: any) => {
+    const handleSendMessage = (e: any) => {
         e.preventDefault()
         const nameError = validateName(form)
         const emailError = validateEmail(form)
@@ -111,6 +111,8 @@ const Footer = () => {
             setErr({...err, name: null, email: null, text: null})
             setBorderColor('')
 
+
+            emailjs.sendForm('service_ysksjvj', 'template_90whiqb', formData.current as any, 'DuLsiLic-6F4jmwX4')
 
             setForm({...form, name: '', email: '', text: ''})
             return setAgree(
@@ -187,7 +189,7 @@ const Footer = () => {
                         className='flex flex-col'>
                         <form
                             className='flex-1 rounded-2xl flex flex-col gap-y-6 items-start'
-
+                            ref={formData}
                             onSubmit={handleSendMessage}
                         >
                             <input

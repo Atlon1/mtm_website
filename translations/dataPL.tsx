@@ -19,7 +19,7 @@ export const links = [
 export const featuresAbout = [
     {
         icon: <FaUsers/>,
-        title: "Wykfalifikowanie inżynierowie",
+        title: "Wykfalifikowani inżynierowie",
         subtitle: "Ludzie z bogatym doświadczeniem doradzą w każdej kwestii pod kątem optymalizacji, kosztów oraz zaproponują najlepsze dla Ciebie rozwiązanie.",
     },
     {
