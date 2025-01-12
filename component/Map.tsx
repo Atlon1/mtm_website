@@ -4,7 +4,7 @@ import React, {useEffect, useRef} from 'react';
 import {Loader} from "@googlemaps/js-api-loader";
 const MapComponent = () => {
 
-    const mapRef = useRef(null) as HTMLDivElement;
+    const mapRef = useRef(null) as any;
 
     useEffect(() => {
         const initMap = async () => {
@@ -26,7 +26,7 @@ const MapComponent = () => {
                mapId: 'MY_NEXTJS_MAPID'
            }
 
-           const map = new Map(mapRef.current, mapOptions) as HTMLDivElement;
+           const map = new Map(mapRef.current, mapOptions) as any;
 
            const marker = new Marker({
                position: position,
