@@ -43,7 +43,7 @@ const footerItemVariants = {
 
 const Footer = () => {
     const {thxText, singleWord, nameValidation, textValidation, emailValidation} = contactPl
-    const formData: any = useRef()
+    const formData: any = useRef(null)
 
     const validateName = (form: any) => {
         const {name, nameLength} = nameValidation
