@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import {Link as ScrollLink} from 'react-scroll'
-import {useState, useEffect, useRef} from 'react'
+import {useState, useRef} from 'react'
 import emailjs from '@emailjs/browser'
 import {FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaFacebook, FaLinkedin, FaYoutube} from "react-icons/fa";
 import {contactPl, contactUsPl} from "../translations/dataPL";
@@ -43,7 +43,7 @@ const footerItemVariants = {
 
 const Footer = () => {
     const {thxText, singleWord, nameValidation, textValidation, emailValidation} = contactPl
-    const formData = useRef()
+    const formData: any = useRef()
 
     const validateName = (form: any) => {
         const {name, nameLength} = nameValidation
