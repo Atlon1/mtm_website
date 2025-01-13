@@ -10,7 +10,6 @@ const MobileNav = ({containerStyle, closeNav}: { containerStyle: string , closeN
 
     const links = localStorage.getItem("lang") === "eng" ? linksENG : linksPL
 
-    console.log(links)
 
     return (
         <nav className={`${containerStyle}`}>
