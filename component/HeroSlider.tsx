@@ -34,7 +34,7 @@ const HeroSlider = () => {
                             whileInView={'show'}
                             viewport={{once: false, amount: 0.2}}
                             className='h1 text-center lg:text-left mb-2'>
-                            <span className='text-accent'>{heroData[0].title}</span> {heroData[0].subtitle}
+                            <span className='text-accent'>{heroData[0].title}</span><br/> {heroData[0].subtitle}
                         </motion.h1>
                         <motion.p
                             variants={fadeIn('up', 0.6)}

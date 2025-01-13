@@ -153,7 +153,7 @@ const Footer = () => {
                             className='cursor-pointer hover:text-accent transition-all'
                         >
                             <Image
-                                src={'/assets/img/Logo_bezTła.png'}
+                                src={'/assets/img/MTM.svg'}
                                 alt={'logo'}
                                 width={400}
                                 height={200}

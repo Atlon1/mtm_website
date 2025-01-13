@@ -34,7 +34,7 @@ export default {
                     200: "#151515",
                     300: "#111",
                 },
-                accent: '#d4000d'
+                accent: '#c6a249'
             },
         },
     },

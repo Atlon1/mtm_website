@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {useState, useEffect} from "react";
 import {MdMenu} from 'react-icons/md';
+import {AiOutlineClose} from 'react-icons/ai';
 import {GB, PL} from 'country-flag-icons/react/3x2'
 import {FaRegClock} from 'react-icons/fa'
 import { MdOutlineAlternateEmail } from "react-icons/md";
@@ -70,10 +71,11 @@ const Header = () => {
                     activeClass='active'
                     className='cursor-pointer hover:text-accent transition-all'
                 >
-                    <Image src={'/assets/img/Logo_bezTła.png'} width={180} height={70} alt='Logo'/>
+                    <Image src={'/assets/img/MTM.svg'} width={140} height={100} alt='Logo'/>
                 </ScrollLink>
                 <MobileNav
-                    containerStyle={`${headerActive ? 'top-[80px]' : 'top-[120px]'} ${openNav ? 'max-h-max pt-8 pb-10 border-t border-white/10' : 'max-h-0 pt-0 pb-0 overflow-hidden border-white/0'} text-white flex flex-col text-center gap-8 fixed bg-primary-200 w-full left-0 top-[120px] text-base uppercase font-medium transition-all xl:hidden`}/>
+                    containerStyle={`${headerActive ? 'top-[80px]' : 'top-[120px]'} ${openNav ? 'max-h-max pt-8 pb-10 border-t border-white/10' : 'max-h-0 pt-0 pb-0 overflow-hidden border-white/0'} text-white flex flex-col text-center gap-8 fixed bg-primary-200 w-full left-0 top-[120px] text-base uppercase font-medium transition-all xl:hidden`}
+                    closeNav={(value: any) => setOpenNav(value)} />
                 <Nav containerStyle='flex gap-4 text-white hidden xl:flex uppercase'/>
                 <div className='flex items-center gap-4'>
                     <div className='text-white flex items-center gap-2'>
@@ -92,8 +94,8 @@ const Header = () => {
                             />
                         </button>
                     </div>
-                    <button onClick={() => setOpenNav(!openNav)} className='text-white xl:hidden'>
-                        <MdMenu className='text-4xl'/>
+                    <button onClick={() => setOpenNav(!openNav)} className='text-white xl:hidden transition-all duration-300'>
+                        {openNav ? <AiOutlineClose className='text-4xl'/> :<MdMenu className='text-4xl'/> }
                     </button>
                 </div>
             </div>

@@ -2,7 +2,7 @@ import {links} from "../translations/dataPL";
 import {Link as ScrollLink} from "react-scroll/modules";
 import {useMediaQuery} from "react-responsive";
 
-const MobileNav = ({containerStyle}: { containerStyle: string }) => {
+const MobileNav = ({containerStyle, closeNav}: { containerStyle: string , closeNav: any }) => {
     const isMobile = useMediaQuery({
         query: '(max-width: 640px)'
     })
@@ -18,6 +18,7 @@ const MobileNav = ({containerStyle}: { containerStyle: string }) => {
                     activeClass={`${isMobile && 'active'}`}
                     key={index}
                     className='cursor-pointer hover:text-accent transition-all'
+                    onClick={() => closeNav(false)}
                 >
                     {link.name}
                 </ScrollLink>

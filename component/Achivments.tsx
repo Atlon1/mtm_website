@@ -35,7 +35,7 @@ const statsItem = {
 
 const Achivments = () => {
     const ref = useRef(null)
-    const isInView = useInView(ref, )
+    const isInView = useInView(ref)
 
     return (
         <section>

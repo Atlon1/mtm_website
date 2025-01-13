@@ -15,25 +15,6 @@ export const links = [
 ]
 
 
-
-export const featuresAbout = [
-    {
-        icon: <FaUsers/>,
-        title: "Wykfalifikowani inżynierowie",
-        subtitle: "Ludzie z bogatym doświadczeniem doradzą w każdej kwestii pod kątem optymalizacji, kosztów oraz zaproponują najlepsze dla Ciebie rozwiązanie.",
-    },
-    {
-        icon: <IoIosPricetag/>,
-        title: "Ceny",
-        subtitle: "Dostosujemy cenę do Twoich potrzeb i zapewnimy terminową dostawę.",
-    },
-    {
-        icon: <MdStorage/>,
-        title: "Sprzęt",
-        subtitle: "Posiadamy najwyższej klasy sprzęt, który spełni oczekiwania każdego klienta. Wykonujemy części do form wtryskowych, motoryzacyjnych, części używane w przemyśle lotniczym.",
-    }
-]
-
 export const heroData = [{
     title: "Frezowanie CNC",
     subtitle: "Wysoka Precyzja",
@@ -58,13 +39,30 @@ export const heroData = [{
 
 export const AboutStatsPL = [{
     singleWord: 'O nas',
-    Title: 'Jesteśmy młodą firmą, ale ludzie pracujący w strukturze mają wieloletnie doświadczenie w branży. Wykonujemy następujące rodzaje obróbki: Frezowanie, Toczenie, Szlifowanie.'
+    Title: 'Choć nasza firma jest młoda, nasz zespół składa się z doświadczonych specjalistów z wieloletnim stażem w branży. Oferujemy usługi w zakresie obróbki stali, aluminium, w tym frezowanie, toczenie i szlifowanie.'
 }]
 
+export const featuresAbout = [
+    {
+        icon: <FaUsers/>,
+        title: "Wykflaifikowani inżynierowie",
+        subtitle: "Ludzie z bogatym doświadczeniem doradzą w każdej kwestii pod kątem optymalizacji, kosztów oraz zaproponują najlepsze dla Ciebie rozwiązanie.",
+    },
+    {
+        icon: <IoIosPricetag/>,
+        title: "Ceny",
+        subtitle: "Dostosujemy cenę do Twoich potrzeb i zapewnimy terminową dostawę.",
+    },
+    {
+        icon: <MdStorage/>,
+        title: "Sprzęt",
+        subtitle: "Posiadamy najwyższej klasy sprzęt, który spełni oczekiwania każdego klienta. Wykonujemy części do form wtryskowych, motoryzacyjnych, części używane w przemyśle lotniczym.",
+    }
+]
 export const achimentsStats = [{
     number: 15,
     icon: <FaBriefcase/>,
-    text: "Lata doswiadczenia"
+    text: "Lata doświadczenia"
 }, {
     number: 879,
     icon: <FaClock/>,
@@ -87,7 +85,7 @@ export const membershipData = [{
     benefits: [
         {
             icon: <FaCheck/>,
-            text: 'Frezowanie CNC, w 3 osich'
+            text: 'Frezowanie CNC, w 3 osiach'
         },
         {
             icon: <FaCheck/>,
@@ -158,7 +156,7 @@ export const classesVariants = [
     {
         name: 'Frezowanie CNC',
         img: '/assets/img/classes/millingcnc.jpeg',
-        description: 'Frezowanie CNC (Computerized Numerical Control) jest jednym z rodzajów obróbki metali. Polega na cięciu wieloostrzowym narzędziem zwanym frezem na obrabiarce sterowanej numerycznie, zwanej frezarką CNC. Cały proces frezowania polega na tym, że narzędzie wykonuje ruch obrotowy, podczas gdy przedmiot obrabiany lub narzędzie wykonuje ruch posuwowy. W zależności od tego, jak oś obrotu frezu jest ustawiona względem obrabianej powierzchni, rozróżnia się frezowanie obwodowe i czołowe. W zależności od ruchu posuwowego względem ruchu roboczego rozróżnia się frezowanie współbieżne i przeciwbieżne.'
+        description: 'Frezowanie CNC (Computerized Numerical Control) jest jednym z rodzajów obróbki metali. Polega na cięciu wieloostrzowym narzędziem zwanym frezem na obrabiarce sterowanej numerycznie, zwanej frezarką CNC. Cały proces frezowania polega na tym, że narzędzie wykonuje ruch obrotowy, podczas gdy przedmiot obrabiany lub narzędzie wykonuje ruch posuwowy. W zależności od tego, jak oś obrotu frezu jest ustawiona względem obrabianej powierzchni, rozróżnia się frezowanie obwodowe i czołowe. '
     },
     {
         name: 'Toczenie CNC',
