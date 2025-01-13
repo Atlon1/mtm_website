@@ -24,6 +24,8 @@ export const metadata: Metadata = {
     description: "Welcome to MTM Precision Solutions",
 };
 
+<link rel="icon" href="/MTMicon.svg" sizes="any" />
+
 export default function RootLayout({
                                        children,
                                    }: Readonly<{

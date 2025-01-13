@@ -1,12 +1,14 @@
 'use client';
 
 import CountUp from "react-countup";
-import {achimentsStats} from "../translations/dataPL";
+import {achimentsStatsPL} from "../translations/dataPL";
+import {achimentsStatsENG} from "../translations/dataENG";
 import {motion, useInView} from "framer-motion";
 import {useRef} from "react";
 
 
 const statsContainerVariant = {
+
     hidden: {
         opacity: 0
     },
@@ -34,6 +36,8 @@ const statsItem = {
 
 
 const Achivments = () => {
+
+    const achimentsStats = localStorage.getItem('lang') === 'pl' ? achimentsStatsPL : achimentsStatsENG
     const ref = useRef(null)
     const isInView = useInView(ref)
 

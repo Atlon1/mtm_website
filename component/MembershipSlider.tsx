@@ -3,7 +3,8 @@
 
 import {Link as ScrollLink} from 'react-scroll'
 import CustomButton from "./CustomButton";
-import {membershipData, membershipData2PL} from "../translations/dataPL";
+import {membershipDataPL, membershipData2PL} from "../translations/dataPL";
+import {membershipDataENG, membershipData2ENG} from "../translations/dataENG";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Pagination} from "swiper/modules";
 
@@ -11,6 +12,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const MembershipSlider = () => {
+    const membershipData = localStorage.getItem("lang") === "eng" ? membershipDataENG : membershipDataPL
+    const membershipData2 = localStorage.getItem("lang") === "eng" ? membershipData2ENG : membershipData2PL
     return (
         <Swiper
             slidesPerView={1}
@@ -50,9 +53,9 @@ const MembershipSlider = () => {
                                     })}
                                 </ul>
                                 <p className='text-accent mb-8 flex gap-1 items-center'>
-                                    <sup className='text-4xl'>{membershipData2PL.value}</sup>
+                                    <sup className='text-4xl'>{membershipData2.value}</sup>
                                     <strong className='text-6xl'>{item.Price}</strong>
-                                    <em className='self-end text-2xl'>{membershipData2PL.subtitle}</em>
+                                    <em className='self-end text-2xl'>{membershipData2.subtitle}</em>
                                 </p>
                                 <ScrollLink
                                     offset={-101}
@@ -62,7 +65,7 @@ const MembershipSlider = () => {
                                     activeClass='active'
                                     className='cursor-pointer hover:text-accent transition-all'
                                 >
-                                    <CustomButton text={membershipData2PL.button} containerStyles='w-[196px] h-[60px]'/>
+                                    <CustomButton text={membershipData2.button} containerStyles='w-[196px] h-[60px]'/>
                                 </ScrollLink>
                             </div>
                         </div>

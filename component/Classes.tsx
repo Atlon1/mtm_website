@@ -3,9 +3,11 @@
 import Image from "next/image";
 import {motion} from "framer-motion";
 import {fadeIn} from "../lib/variants";
-import {classesVariants} from "../translations/dataPL";
+import {classesVariantsPL} from "../translations/dataPL";
+import {classesVariantsENG} from "../translations/dataENG";
 
 const Classes = () => {
+    const classesVariants = localStorage.getItem("lang") === "eng" ? classesVariantsENG : classesVariantsPL
     return (
         <section id='classes'>
             <motion.div

@@ -5,7 +5,7 @@ import {ImUsers} from "react-icons/im";
 import {FaCheck} from "react-icons/fa6";
 
 
-export const links = [
+export const linksPL = [
     {name: 'Start', target: 'home', offset: -101},
     {name: 'O nas', target: 'about', offset: -81},
     {name: 'Usługi', target: 'prices', offset: -41},
@@ -15,7 +15,7 @@ export const links = [
 ]
 
 
-export const heroData = [{
+export const heroDataPL = [{
     title: "Frezowanie CNC",
     subtitle: "Wysoka Precyzja",
     text: "Posiadamy wieloletnie doświadczenie w tej dziedzinie."
@@ -42,7 +42,7 @@ export const AboutStatsPL = [{
     Title: 'Choć nasza firma jest młoda, nasz zespół składa się z doświadczonych specjalistów z wieloletnim stażem w branży. Oferujemy usługi w zakresie obróbki stali, aluminium, w tym frezowanie, toczenie i szlifowanie.'
 }]
 
-export const featuresAbout = [
+export const featuresAboutPL = [
     {
         icon: <FaUsers/>,
         title: "Wykflaifikowani inżynierowie",
@@ -59,7 +59,7 @@ export const featuresAbout = [
         subtitle: "Posiadamy najwyższej klasy sprzęt, który spełni oczekiwania każdego klienta. Wykonujemy części do form wtryskowych, motoryzacyjnych, części używane w przemyśle lotniczym.",
     }
 ]
-export const achimentsStats = [{
+export const achimentsStatsPL = [{
     number: 15,
     icon: <FaBriefcase/>,
     text: "Lata doświadczenia"
@@ -79,7 +79,7 @@ export const achimentsStats = [{
 ]
 
 
-export const membershipData = [{
+export const membershipDataPL = [{
     title: 'Frezowanie CNC',
     Price: '120',
     benefits: [
@@ -152,7 +152,7 @@ export const brandsDataPl = {
     brand: 'Znane Marki',
 }
 
-export const classesVariants = [
+export const classesVariantsPL = [
     {
         name: 'Frezowanie CNC',
         img: '/assets/img/classes/millingcnc.jpeg',
@@ -215,5 +215,7 @@ export const contactPl = {
     singleWord: ['Get in Touch', 'Zacznijmy pracę', 'razem!', 'Wyślij wiadomość!', 'Twoje Dane:', 'Adres email:', 'Wiadomość', "Napisz do nas!"],
 }
 export const contactUsPl = {
-    description: "Zapraszamy do współpracy!"
+    description: "Zapraszamy do współpracy!",
+    sendbtn:"Wyslij wiadomość!",
+    placeholder: "Imię i nazwisko"
 }

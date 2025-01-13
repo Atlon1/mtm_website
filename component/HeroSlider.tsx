@@ -9,10 +9,13 @@ import CustomButton from "./CustomButton";
 import {motion} from 'framer-motion';
 import {fadeIn} from "../lib/variants";
 import {Autoplay} from "swiper/modules";
-import {heroData} from "../translations/dataPL";
+import {heroDataPL} from "../translations/dataPL";
+import {heroDataENG} from "../translations/dataENG";
 import {Link as ScrollLink} from 'react-scroll'
 
 const HeroSlider = () => {
+
+    const heroData = localStorage.getItem("lang") === "eng" ? heroDataENG : heroDataPL
     return (
         <Swiper
           centeredSlides={true}

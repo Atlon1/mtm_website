@@ -6,7 +6,7 @@ import {useState, useRef} from 'react'
 import emailjs from '@emailjs/browser'
 import {FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaFacebook, FaLinkedin, FaYoutube} from "react-icons/fa";
 import {contactPl, contactUsPl} from "../translations/dataPL";
-
+import {contactENG, contactUsENG} from "../translations/dataENG";
 import {motion} from "framer-motion";
 import MapComponent from "./Map";
 
@@ -42,7 +42,9 @@ const footerItemVariants = {
 }
 
 const Footer = () => {
-    const {thxText, singleWord, nameValidation, textValidation, emailValidation} = contactPl
+
+    const contactUs = localStorage.getItem("lang") === "eng" ? contactUsENG : contactUsPl
+    const {thxText, singleWord, nameValidation, textValidation, emailValidation} = localStorage.getItem("lang") === "eng" ? contactENG : contactPl
     const formData: any = useRef(null)
 
     const validateName = (form: any) => {
@@ -160,7 +162,7 @@ const Footer = () => {
                             />
                         </ScrollLink>
                         <p className='max-w-sm'>
-                            {contactUsPl.description}
+                            {contactUs.description}
                         </p>
                         <ul className='flex flex-col gap-4'>
                             <li className='flex items-center gap-4'>
@@ -199,7 +201,7 @@ const Footer = () => {
                                 onChange={updateField}
                                 className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all'
                                 type='text'
-                                placeholder='Imię i nazwisko'
+                                placeholder={contactUs.placeholder}
                                 name="name"
                                 value={form.name}
                                 style=
@@ -247,7 +249,7 @@ const Footer = () => {
                                  </span>
                                 <span
                                     className='ease relative text-white transition duration-300 group-hover:text-white'>
-                                    Wyślij
+                                    {contactUs.sendbtn}
                                  </span>
                             </button>
                             {agree}

@@ -1,4 +1,5 @@
-import {links} from "../translations/dataPL";
+import {linksPL} from "../translations/dataPL";
+import {linksENG} from "../translations/dataENG";
 import {Link as ScrollLink} from "react-scroll/modules";
 import {useMediaQuery} from "react-responsive";
 
@@ -6,6 +7,10 @@ const MobileNav = ({containerStyle, closeNav}: { containerStyle: string , closeN
     const isMobile = useMediaQuery({
         query: '(max-width: 640px)'
     })
+
+    const links = localStorage.getItem("lang") === "eng" ? linksENG : linksPL
+
+    console.log(links)
 
     return (
         <nav className={`${containerStyle}`}>

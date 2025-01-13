@@ -2,12 +2,17 @@
 
 import {motion} from "framer-motion";
 import {fadeIn} from "../lib/variants";
-import {featuresAbout} from "../translations/dataPL";
+import {featuresAboutPL} from "../translations/dataPL";
+import {featuresAboutENG} from "../translations/dataENG";
 import Achivments from "./Achivments";
 import {AboutStatsPL} from "../translations/dataPL";
+import {AboutStatsENG} from "../translations/dataENG";
 
 
 const About = () => {
+
+    const AboutStats = localStorage.getItem("lang") === "eng" ? AboutStatsENG : AboutStatsPL
+    const featuresAbout = localStorage.getItem("lang") === "eng" ? featuresAboutENG : featuresAboutPL
     return (
         <section className='pt-8 pb14 lg:pt-16 lg:pb-28 pb-12' id='about'>
            <div className='container mx-auto'>
@@ -18,7 +23,7 @@ const About = () => {
                        whileInView='show'
                        viewport={{once: false, amount: 0.2}}
                        className='h2 text-center'>
-                       {AboutStatsPL[0].singleWord}
+                       {AboutStats[0].singleWord}
                    </motion.h2>
                    <motion.p
                        variants={fadeIn('up', 0.6)}
@@ -26,7 +31,7 @@ const About = () => {
                        whileInView='show'
                        viewport={{once: false, amount: 0.2}}
                        className='max-w-[600px] mx-auto text-center'>
-                       {AboutStatsPL[0].Title}
+                       {AboutStats[0].Title}
                    </motion.p>
                </div>
                <motion.div

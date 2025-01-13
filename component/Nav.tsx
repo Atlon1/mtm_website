@@ -1,10 +1,15 @@
 'use client'
 
 import {Link as ScrollLink} from 'react-scroll'
-import {links} from '../translations/dataPL'
+import {linksPL} from '../translations/dataPL'
+import {linksENG} from '../translations/dataENG'
 
 
 const Nav = ({containerStyle}: { containerStyle: string }) => {
+
+
+    const links = localStorage.getItem('lang') === 'eng' ? linksENG : linksPL
+
     return (
         <nav className={`${containerStyle}`}>
             {links.map((link, index) => {

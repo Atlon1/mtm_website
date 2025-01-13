@@ -4,8 +4,10 @@ import {motion} from "framer-motion";
 import {fadeIn} from "../lib/variants";
 import MembershipSlider from "./MembershipSlider";
 import {membershipData2PL} from "../translations/dataPL";
+import {membershipData2ENG} from "../translations/dataENG";
 
 const MemberShip = () => {
+    const membershipData2 = localStorage.getItem("lang") === "eng" ? membershipData2ENG : membershipData2PL
     return (
         <motion.section
             variants={fadeIn('up', 0.2)}
@@ -18,7 +20,7 @@ const MemberShip = () => {
                     variants={fadeIn('up', 0.4)}
                     initial='hidden'
                     whileInView={'show'}
-                    className='h2 text-white text-center mb-8'>{membershipData2PL.title}</motion.h2>
+                    className='h2 text-white text-center mb-8'>{membershipData2.title}</motion.h2>
                 <motion.div
                 variants={fadeIn('up', 0.6)}
                 initial='hidden'
