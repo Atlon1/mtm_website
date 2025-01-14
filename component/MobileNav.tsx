@@ -2,13 +2,25 @@ import {linksPL} from "../translations/dataPL";
 import {linksENG} from "../translations/dataENG";
 import {Link as ScrollLink} from "react-scroll/modules";
 import {useMediaQuery} from "react-responsive";
+import {useEffect,useState} from "react";
 
 const MobileNav = ({containerStyle, closeNav}: { containerStyle: string , closeNav: any }) => {
     const isMobile = useMediaQuery({
         query: '(max-width: 640px)'
     })
 
-    const links = localStorage.getItem("lang") === "eng" ? linksENG : linksPL
+    const [links, setLinks] = useState<any[]>([])
+
+useEffect(()=>{
+    const lang = localStorage.getItem("lang") || "pl";
+    const newLinks = lang === "pl" ? linksPL : linksENG;
+
+    if (Array.isArray(newLinks)) {
+        setLinks(newLinks);  // Ustawiamy links po załadowaniu komponentu
+    } else {
+        console.error("Links should be an array, but received:", typeof newLinks);
+    }
+},[])
 
 
     return (
