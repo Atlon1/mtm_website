@@ -12,8 +12,13 @@ import {Autoplay} from "swiper/modules";
 import {heroDataPL} from "../translations/dataPL";
 import {heroDataENG} from "../translations/dataENG";
 import {Link as ScrollLink} from 'react-scroll'
+import {useEffect, useState} from "react";
+
 
 const HeroSlider = () => {
+
+
+
 
     const heroData = localStorage.getItem("lang") === "eng" ? heroDataENG : heroDataPL
     return (

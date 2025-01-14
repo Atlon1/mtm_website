@@ -16,7 +16,7 @@ useEffect(()=>{
     const newLinks = lang === "pl" ? linksPL : linksENG;
 
     if (Array.isArray(newLinks)) {
-        setLinks(newLinks);  // Ustawiamy links po załadowaniu komponentu
+        setLinks(newLinks);
     } else {
         console.error("Links should be an array, but received:", typeof newLinks);
     }

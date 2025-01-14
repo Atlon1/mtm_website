@@ -3,12 +3,24 @@
 import {Link as ScrollLink} from 'react-scroll'
 import {linksPL} from '../translations/dataPL'
 import {linksENG} from '../translations/dataENG'
+import {useEffect, useState} from "react";
 
 
 const Nav = ({containerStyle}: { containerStyle: string }) => {
 
 
-    const links = localStorage.getItem('lang') === 'eng' ? linksENG : linksPL
+    const [links, setLinks] = useState<any[]>([])
+
+    useEffect(()=>{
+        const lang = localStorage.getItem("lang") || "pl";
+        const newLinks = lang === "pl" ? linksPL : linksENG;
+
+        if (Array.isArray(newLinks)) {
+            setLinks(newLinks);
+        } else {
+            console.error("Links should be an array, but received:", typeof newLinks);
+        }
+    },[])
 
     return (
         <nav className={`${containerStyle}`}>
