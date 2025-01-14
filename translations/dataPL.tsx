@@ -194,7 +194,6 @@ export const brands = [{
 ]
 
 
-
 export const contactPl = {
 
     nameValidation: {
@@ -216,6 +215,6 @@ export const contactPl = {
 }
 export const contactUsPl = {
     description: "Zapraszamy do współpracy!",
-    sendbtn:"Wyslij wiadomość!",
+    sendbtn: "Wyslij wiadomość!",
     placeholder: "Imię i nazwisko"
 }

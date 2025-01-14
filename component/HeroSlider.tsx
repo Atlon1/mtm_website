@@ -14,9 +14,28 @@ import {heroDataENG} from "../translations/dataENG";
 import {Link as ScrollLink} from 'react-scroll'
 import {useEffect, useState} from "react";
 
+type HeroDataItem = {
+    title: string
+    subtitle: string
+    text: string
+}
+
+type HeroData = HeroDataItem[]
 
 const HeroSlider = () => {
 
+ const [HeroDataLang, setHeroDataLang] = useState<HeroData>([])
+
+    useEffect(() => {
+        if (localStorage.getItem('lang') === null) {
+            localStorage.setItem('lang', 'pl')
+        }
+        if (localStorage.getItem('lang') === 'eng') {
+            setHeroDataLang(heroDataENG)
+        } else {
+            setHeroDataLang(heroDataPL)
+        }
+    },[])
 
 
 
