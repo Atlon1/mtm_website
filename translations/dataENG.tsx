@@ -33,14 +33,14 @@ export const heroDataENG = [{
     {
         title: "Start with us!",
         subtitle: "High Quality",
-        text: "We employ specialists in this field."
+        text: ""
     }
 ]
 
-export const AboutStatsENG = [{
-    singleWord: 'About us',
-    Title: 'Although our company is young, our team consists of experienced specialists with many years of industry experience. We offer services in steel and aluminum processing, including milling, turning, and grinding.'
-}]
+export const AboutStatsENG = [
+    'About us',
+    'Although our company is young, our team consists of experienced specialists with many years of industry experience. We offer services in steel and aluminum processing, including milling, turning, and grinding.'
+]
 
 export const featuresAboutENG = [
     {

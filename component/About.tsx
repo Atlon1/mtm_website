@@ -1,5 +1,5 @@
 'use client';
-
+import {useState, useEffect} from "react";
 import {motion} from "framer-motion";
 import {fadeIn} from "../lib/variants";
 import {featuresAboutPL} from "../translations/dataPL";
@@ -11,8 +11,23 @@ import {AboutStatsENG} from "../translations/dataENG";
 
 const About = () => {
 
-    const AboutStats = localStorage.getItem("lang") === "eng" ? AboutStatsENG : AboutStatsPL
-    const featuresAbout = localStorage.getItem("lang") === "eng" ? featuresAboutENG : featuresAboutPL
+    const [aboutStatsLang, setAboutStatsLang] = useState([])
+    const [featuresAboutLang, setFeaturesAboutLang] = useState([])
+
+    useEffect(() => {
+        if (localStorage.getItem('lang') === null) {
+            localStorage.setItem('lang', 'pl')
+        }
+        if (localStorage.getItem('lang') === 'eng') {
+            setAboutStatsLang(AboutStatsENG)
+            setFeaturesAboutLang(featuresAboutENG)
+        } else {
+            setAboutStatsLang(AboutStatsPL)
+            setFeaturesAboutLang(featuresAboutPL)
+        }
+    })
+
+
     return (
         <section className='pt-8 pb14 lg:pt-16 lg:pb-28 pb-12' id='about'>
            <div className='container mx-auto'>
@@ -23,7 +38,7 @@ const About = () => {
                        whileInView='show'
                        viewport={{once: false, amount: 0.2}}
                        className='h2 text-center'>
-                       {AboutStats[0].singleWord}
+                       {aboutStatsLang[0]}
                    </motion.h2>
                    <motion.p
                        variants={fadeIn('up', 0.6)}
@@ -31,7 +46,7 @@ const About = () => {
                        whileInView='show'
                        viewport={{once: false, amount: 0.2}}
                        className='max-w-[600px] mx-auto text-center'>
-                       {AboutStats[0].Title}
+                       {aboutStatsLang[1]}
                    </motion.p>
                </div>
                <motion.div
@@ -40,7 +55,7 @@ const About = () => {
                    whileInView='show'
                    viewport={{once: false, amount: 0.2}}
                    className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-16'>
-                   {featuresAbout.map((feature, index) => {
+                   {featuresAboutLang.map((feature, index) => {
                     return (
                         <div className='flex flex-col justify-center items-center gap-4 border p-10' key={index}>
                             <div className='text-4xl bg-primary-300 text-white w-[80px] h-[80px] rounded-full flex justify-center items-center'>{feature.icon}</div>

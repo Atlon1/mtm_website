@@ -33,14 +33,14 @@ export const heroDataPL = [{
     {
         title: "Zacznij z nami!",
         subtitle: "Wysoka jakść",
-        text: "Zatrudniamy specjalistów w tej dziedzinie."
+        text: ""
     }
 ]
 
-export const AboutStatsPL = [{
-    singleWord: 'O nas',
-    Title: 'Choć nasza firma jest młoda, nasz zespół składa się z doświadczonych specjalistów z wieloletnim stażem w branży. Oferujemy usługi w zakresie obróbki stali, aluminium, w tym frezowanie, toczenie i szlifowanie.'
-}]
+export const AboutStatsPL = [
+    'O nas',
+    'Choć nasza firma jest młoda, nasz zespół składa się z doświadczonych specjalistów z wieloletnim stażem w branży. Oferujemy usługi w zakresie obróbki stali, aluminium, w tym frezowanie, toczenie i szlifowanie.'
+]
 
 export const featuresAboutPL = [
     {
