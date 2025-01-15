@@ -37,10 +37,9 @@ export const heroDataENG = [{
     }
 ]
 
-export const AboutStatsENG = [
-    'About us',
-    'Although our company is young, our team consists of experienced specialists with many years of industry experience. We offer services in steel and aluminum processing, including milling, turning, and grinding.'
-]
+export const AboutStatsENG1 = 'About us'
+export const AboutStatsENG2=    'Although our company is young, our team consists of experienced specialists with many years of industry experience. We offer services in steel and aluminum processing, including milling, turning, and grinding.'
+
 
 export const featuresAboutENG = [
     {

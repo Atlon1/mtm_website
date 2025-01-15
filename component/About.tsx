@@ -5,13 +5,14 @@ import {fadeIn} from "../lib/variants";
 import {featuresAboutPL} from "../translations/dataPL";
 import {featuresAboutENG} from "../translations/dataENG";
 import Achivments from "./Achivments";
-import {AboutStatsPL} from "../translations/dataPL";
-import {AboutStatsENG} from "../translations/dataENG";
+import {AboutStatsPL1,AboutStatsPL2} from "../translations/dataPL";
+import {AboutStatsENG1,AboutStatsENG2} from "../translations/dataENG";
 
 
 const About = () => {
 
-    const [aboutStatsLang, setAboutStatsLang] = useState<string[]>([])
+    const [aboutStatsLang1, setAboutStatsLang1] = useState("")
+    const [aboutStatsLang2, setAboutStatsLang2] = useState("")
     const [featuresAboutLang, setFeaturesAboutLang] = useState([])
 
     useEffect(() => {
@@ -19,10 +20,12 @@ const About = () => {
             localStorage.setItem('lang', 'pl')
         }
         if (localStorage.getItem('lang') === 'eng') {
-            setAboutStatsLang(AboutStatsENG)
+            setAboutStatsLang1(AboutStatsENG1)
+            setAboutStatsLang2(AboutStatsENG2)
             setFeaturesAboutLang(featuresAboutENG)
         } else {
-            setAboutStatsLang(AboutStatsPL)
+            setAboutStatsLang1(AboutStatsPL1)
+            setAboutStatsLang2(AboutStatsPL2)
             setFeaturesAboutLang(featuresAboutPL)
         }
     },[])
@@ -37,7 +40,7 @@ const About = () => {
                        whileInView='show'
                        viewport={{once: false, amount: 0.2}}
                        className='h2 text-center'>
-                       {aboutStatsLang[0]}
+                       {aboutStatsLang1}
                    </motion.h2>
                    <motion.p
                        variants={fadeIn('up', 0.6)}
@@ -45,7 +48,7 @@ const About = () => {
                        whileInView='show'
                        viewport={{once: false, amount: 0.2}}
                        className='max-w-[600px] mx-auto text-center'>
-                       {aboutStatsLang[1]}
+                       {aboutStatsLang2}
                    </motion.p>
                </div>
                <motion.div

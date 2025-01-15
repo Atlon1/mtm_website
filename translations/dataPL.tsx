@@ -37,10 +37,9 @@ export const heroDataPL = [{
     }
 ]
 
-export const AboutStatsPL = [
-    'O nas',
-    'Choć nasza firma jest młoda, nasz zespół składa się z doświadczonych specjalistów z wieloletnim stażem w branży. Oferujemy usługi w zakresie obróbki stali, aluminium, w tym frezowanie, toczenie i szlifowanie.'
-]
+export const AboutStatsPL1 = 'O nas'
+export const  AboutStatsPL2=    'Choć nasza firma jest młoda, nasz zespół składa się z doświadczonych specjalistów z wieloletnim stażem w branży. Oferujemy usługi w zakresie obróbki stali, aluminium, w tym frezowanie, toczenie i szlifowanie.'
+
 
 export const featuresAboutPL = [
     {
