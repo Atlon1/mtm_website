@@ -5,6 +5,7 @@ import {achimentsStatsPL} from "../translations/dataPL";
 import {achimentsStatsENG} from "../translations/dataENG";
 import {motion, useInView} from "framer-motion";
 import {useRef} from "react";
+import {useState, useEffect}  from "react";
 
 
 const statsContainerVariant = {
@@ -37,8 +38,21 @@ const statsItem = {
 
 const Achivments = () => {
 
+    const [achimentsStatsLang, setAchimentsStatsLang] = useState<string[]>([])
+
+    useEffect(() => {
+        if (localStorage.getItem('lang') === null) {
+            localStorage.setItem('lang', 'pl')
+        }
+        if (localStorage.getItem('lang') === 'eng') {
+            setAchimentsStatsLang(achimentsStatsENG)
+        } else {
+            setAchimentsStatsLang(achimentsStatsPL)
+        }
+    })
+
     const achimentsStats = localStorage.getItem('lang') === 'pl' ? achimentsStatsPL : achimentsStatsENG
-    const ref = useRef(null)
+    const ref = useRef()
     const isInView = useInView(ref)
 
     return (
@@ -50,15 +64,17 @@ const Achivments = () => {
                     whileInView='show'
                     viewport={{once: false, amount: 0.5}}
                     className='grid grid-cols-2 md:grid-cols-4 gap-16'>
-                    {achimentsStats.map((stat, index)=> {
+                    {achimentsStatsLang.map((stat, index)=> {
                         return (
                             <motion.div
                                 variants={statsItem}
                                 className='flex flex-col justify-center items-center'
                                 key={index}>
-                                <div className='border border-accent/90 w-[140px] h-[140px] mx-auto rounded-full p-1 mb-6'>
+                                <div
+                                    ref={ref}
+                                    className='border border-accent/90 w-[140px] h-[140px] mx-auto rounded-full p-1 mb-6'>
                                     <div
-                                        ref={ref as any}
+
                                         className='border border-accent/30 w-full h-full flex items-center justify-center text-5xl rounded-full'>
                                         {isInView && <CountUp start={0} end={stat.number} duration={6} />}
                                     </div>
