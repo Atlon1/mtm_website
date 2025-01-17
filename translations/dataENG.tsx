@@ -71,19 +71,19 @@ export const featuresAboutENG: featuresType[]  = [
 ]
 export const achimentsStatsENG = [{
     number: 15,
-    icon: <FaBriefcase/>,
+    icon: FaBriefcase,
     text: "Years of Experience"
 }, {
     number: 879,
-    icon: <FaClock/>,
+    icon: FaClock,
     text: "Work Hours"
 }, {
     number: 150,
-    icon: <ImUsers/>,
+    icon: ImUsers,
     text: "Satisfied Customers"
 }, {
     number: 15,
-    icon: <FaTrophy/>,
+    icon: FaTrophy,
     text: "Completed Projects"
 }
 ]

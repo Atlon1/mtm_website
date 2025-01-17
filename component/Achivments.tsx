@@ -5,6 +5,7 @@ import { achimentsStatsPL } from "../translations/dataPL";
 import { achimentsStatsENG } from "../translations/dataENG";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
+import {IconType} from "react-icons";
 
 const statsContainerVariant = {
     hidden: { opacity: 0 },
@@ -30,19 +31,21 @@ const statsItem = {
     },
 };
 
+type Achievement = {
+    number: number;
+    icon: IconType;
+    text: string;
+};
+
 const Achivments = () => {
-    const [achimentsStatsLang, setAchimentsStatsLang] = useState<string[]>([]);
+    const [achimentsStatsLang, setAchimentsStatsLang] = useState<Achievement[]>([]);
     const ref = useRef<HTMLDivElement>(null);
-    const isInView = useInView(ref);
+    const isInView = useInView(ref, { once: true });
 
     useEffect(() => {
         if (typeof window !== "undefined") {
             const lang = localStorage.getItem("lang") || "pl";
-            if (lang === "eng") {
-                setAchimentsStatsLang(achimentsStatsENG);
-            } else {
-                setAchimentsStatsLang(achimentsStatsPL);
-            }
+            setAchimentsStatsLang(lang === "eng" ? achimentsStatsENG : achimentsStatsPL);
         }
     }, []);
 
@@ -62,18 +65,13 @@ const Achivments = () => {
                             className="flex flex-col justify-center items-center"
                             key={index}
                         >
-                            <div
-                                ref={ref}
-                                className="border border-accent/90 w-[140px] h-[140px] mx-auto rounded-full p-1 mb-6"
-                            >
+                            <div className="border border-accent/90 w-[140px] h-[140px] mx-auto rounded-full p-1 mb-6">
                                 <div className="border border-accent/30 w-full h-full flex items-center justify-center text-5xl rounded-full">
-                                    {isInView && (
-                                        <CountUp start={0} end={stat.number} duration={6} />
-                                    )}
+                                    <CountUp start={0} end={stat.number} duration={6} />
                                 </div>
                             </div>
                             <div className="flex flex-col items-center justify-center text-center">
-                                <div className="text-3xl mb-2">{stat.icon}</div>
+                                <div className="text-3xl mb-2"><stat.icon/></div>
                                 <h4 className="h4">{stat.text}</h4>
                             </div>
                         </motion.div>
@@ -85,3 +83,4 @@ const Achivments = () => {
 };
 
 export default Achivments;
+

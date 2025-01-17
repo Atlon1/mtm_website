@@ -69,19 +69,19 @@ export const featuresAboutPL : featuresType[]  = [
 ]
 export const achimentsStatsPL = [{
     number: 15,
-    icon: <FaBriefcase/>,
+    icon: FaBriefcase,
     text: "Lata doświadczenia"
 }, {
     number: 879,
-    icon: <FaClock/>,
+    icon: FaClock,
     text: "Czas pracy"
 }, {
     number: 150,
-    icon: <ImUsers/>,
+    icon: ImUsers,
     text: "Zadowoleni klienci"
 }, {
     number: 15,
-    icon: <FaTrophy/>,
+    icon: FaTrophy,
     text: "Zakończone projekty"
 }
 ]
