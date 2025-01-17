@@ -3,9 +3,14 @@ import {IoIosPricetag} from "react-icons/io";
 import {MdStorage} from "react-icons/md";
 import {ImUsers} from "react-icons/im";
 import {FaCheck} from "react-icons/fa6";
+import {IconType} from "react-icons";
 
-
-export const linksPL = [
+type linksType = {
+    name: string
+    target: string
+    offset: number
+}
+export const linksPL : linksType[] = [
     {name: 'Start', target: 'home', offset: -101},
     {name: 'O nas', target: 'about', offset: -81},
     {name: 'Usługi', target: 'prices', offset: -41},
@@ -39,21 +44,25 @@ export const heroDataPL = [{
 
 export const AboutStatsPL1 = 'O nas'
 export const  AboutStatsPL2=    'Choć nasza firma jest młoda, nasz zespół składa się z doświadczonych specjalistów z wieloletnim stażem w branży. Oferujemy usługi w zakresie obróbki stali, aluminium, w tym frezowanie, toczenie i szlifowanie.'
+type featuresType = {
+    icon: IconType
+    title: string
+    subtitle: string
+}
 
-
-export const featuresAboutPL = [
+export const featuresAboutPL : featuresType[]  = [
     {
-        icon: <FaUsers/>,
+        icon: FaUsers,
         title: "Wykflaifikowani inżynierowie",
         subtitle: "Ludzie z bogatym doświadczeniem doradzą w każdej kwestii pod kątem optymalizacji, kosztów oraz zaproponują najlepsze dla Ciebie rozwiązanie.",
     },
     {
-        icon: <IoIosPricetag/>,
+        icon: IoIosPricetag,
         title: "Ceny",
         subtitle: "Dostosujemy cenę do Twoich potrzeb i zapewnimy terminową dostawę.",
     },
     {
-        icon: <MdStorage/>,
+        icon: MdStorage,
         title: "Sprzęt",
         subtitle: "Posiadamy najwyższej klasy sprzęt, który spełni oczekiwania każdego klienta. Wykonujemy części do form wtryskowych, motoryzacyjnych, części używane w przemyśle lotniczym.",
     }

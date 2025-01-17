@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import {Link as ScrollLink} from 'react-scroll'
-import {useState, useRef} from 'react'
+import {useState, useRef, useEffect} from 'react'
 import emailjs from '@emailjs/browser'
 import {FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaFacebook, FaLinkedin, FaYoutube} from "react-icons/fa";
 import {contactPl, contactUsPl} from "../translations/dataPL";
@@ -43,37 +43,50 @@ const footerItemVariants = {
 
 const Footer = () => {
 
-    const contactUs = localStorage.getItem("lang") === "eng" ? contactUsENG : contactUsPl
-    const {thxText, singleWord, nameValidation, textValidation, emailValidation} = localStorage.getItem("lang") === "eng" ? contactENG : contactPl
-    const formData: any = useRef(null)
+    const [contactUs, setContactUs] = useState(contactUsPl);
+    const [translations, setTranslations] = useState(contactPl);
+    const formData = useRef<HTMLFormElement>(null);
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const lang = localStorage.getItem("lang") || "pl";
+            if (lang === "eng") {
+                setContactUs(contactUsENG);
+                setTranslations(contactENG);
+            } else {
+                setContactUs(contactUsPl);
+                setTranslations(contactPl);
+            }
+        }
+    }, []);
+
 
     const validateName = (form: any) => {
-        const {name, nameLength} = nameValidation
+
         if (!form.name) {
-            return `${name}`
+            return `${translations.nameValidation.name}`
         } else if (form.name.length < 2) {
-            return `${nameLength}`
+            return `${translations.nameValidation.nameLength}`
         }
         return null
     }
 
 
     const validateEmail = (form: any) => {
-        const {email, emailFormat} = emailValidation
         if (!form.email) {
-            return `${email}`
+            return `${translations.emailValidation.email}`
         } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(form.email)) {
-            return `${emailFormat}`
+            return `${translations.emailValidation.emailFormat}`
         }
         return null
     }
 
     const validateText = (form: any) => {
-        const {text, textLength} = textValidation
+
         if (!form.text) {
-            return `${text}`
+            return `${translations.textValidation.text}`
         } else if (form.text.length < 40) {
-            return `${textLength}`
+            return `${translations.textValidation.textLength}`
         }
         return null
     }
@@ -127,7 +140,7 @@ const Footer = () => {
                     }
                 }
                 >
-                    {thxText}
+                    {translations.thxText}
                 </div>
             )
         }
@@ -191,7 +204,7 @@ const Footer = () => {
                     <motion.div
                         variants={footerItemVariants}
                         className='flex flex-col'>
-                        <h2>{singleWord[7]}</h2>
+                        <h2>{contactUs.title}</h2>
                         <form
                             className='flex-1 rounded-2xl flex flex-col gap-y-6 items-start'
                             ref={formData}
@@ -229,7 +242,7 @@ const Footer = () => {
                             <textarea
                                 onChange={updateField}
                                 className='bg-transparent border-b py-12 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-5'
-                                placeholder={singleWord[6]}
+                                placeholder={translations.singleWord[6]}
                                 name="text"
                                 value={form.text}
                                 style=

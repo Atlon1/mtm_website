@@ -5,22 +5,24 @@ import {linksPL} from '../translations/dataPL'
 import {linksENG} from '../translations/dataENG'
 import {useState, useEffect} from 'react'
 
-
+type linksType = {
+    name: string
+    target: string
+    offset: number
+}
 
 const Nav = ({containerStyle}: { containerStyle: string }) => {
 
-    const [linksLang, setLinksLang] = useState([])
+    const [linksLang, setLinksLang] = useState<linksType[]>([])
 
     useEffect(() => {
-        if (localStorage.getItem('lang') === null) {
-            localStorage.setItem('lang', 'pl')
+        if (typeof window !== "undefined") {
+            // Kod poniżej wykona się tylko w przeglądarce
+            const lang = localStorage.getItem("lang") || "pl";
+            localStorage.setItem("lang", lang);
+            setLinksLang(lang === "eng" ? linksENG : linksPL);
         }
-        if (localStorage.getItem('lang') === 'eng') {
-            setLinksLang(linksENG)
-        } else {
-            setLinksLang(linksPL)
-        }
-    },[])
+    }, []);
 
 
 

@@ -3,9 +3,15 @@ import {IoIosPricetag} from "react-icons/io";
 import {MdStorage} from "react-icons/md";
 import {ImUsers} from "react-icons/im";
 import {FaCheck} from "react-icons/fa6";
+import { IconType } from "react-icons";
 
 
-export const linksENG = [
+type linksType = {
+    name: string
+    target: string
+    offset: number
+}
+export const linksENG : linksType[] = [
     {name: 'Home', target: 'home', offset: -101},
     {name: 'About us', target: 'about', offset: -81},
     {name: 'Services', target: 'prices', offset: -41},
@@ -40,20 +46,25 @@ export const heroDataENG = [{
 export const AboutStatsENG1 = 'About us'
 export const AboutStatsENG2=    'Although our company is young, our team consists of experienced specialists with many years of industry experience. We offer services in steel and aluminum processing, including milling, turning, and grinding.'
 
+type featuresType = {
+    icon: IconType
+    title: string
+    subtitle: string
+}
 
-export const featuresAboutENG = [
+export const featuresAboutENG: featuresType[]  = [
     {
-        icon: <FaUsers/>,
+        icon: FaUsers,
         title: "Qualified Engineers",
         subtitle: "People with rich experience will advise on every aspect of optimization, costs, and will propose the best solution for you.",
     },
     {
-        icon: <IoIosPricetag/>,
+        icon: IoIosPricetag,
         title: "Prices",
         subtitle: "We will tailor the price to your needs and ensure timely delivery.",
     },
     {
-        icon: <MdStorage/>,
+        icon: MdStorage,
         title: "Equipment",
         subtitle: "We have top-class equipment that will meet the expectations of every customer. We manufacture parts for injection molds, automotive, and aerospace industry components.",
     }
