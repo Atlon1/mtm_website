@@ -40,7 +40,7 @@ type Achievement = {
 const Achivments = () => {
     const [achimentsStatsLang, setAchimentsStatsLang] = useState<Achievement[]>([]);
     const ref = useRef<HTMLDivElement>(null);
-    const isInView = useInView(ref, { once: true });
+    const isInView = useInView(ref);
 
     useEffect(() => {
         if (typeof window !== "undefined") {

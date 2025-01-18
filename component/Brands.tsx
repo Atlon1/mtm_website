@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { brands } from "../translations/dataPL";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import { brandsDataPl } from "../translations/dataPL";
 import { brandsDataENG } from "../translations/dataENG";
 

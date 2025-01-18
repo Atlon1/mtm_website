@@ -3,7 +3,6 @@
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 import Link from "next/link";
-import Image from "next/image";
 import { useState, useEffect } from "react";
 import { MdMenu } from 'react-icons/md';
 import { AiOutlineClose } from 'react-icons/ai';
@@ -117,7 +116,7 @@ const Header = () => {
                     spy
                     activeClass='active'
                     className='cursor-pointer hover:text-accent transition-all'>
-                    <Image src={'/assets/img/MTM.svg'} width={140} height={100} alt='Logo' />
+                    <img src='/assets/img/MTM.svg' alt='Logo' className='w-[140px] h-[100px]'/>
                 </ScrollLink>
                 <MobileNav
                     containerStyle={`${headerActive ? 'top-[80px]' : 'top-[120px]'} ${openNav ? 'max-h-max pt-8 pb-10 border-t border-white/10' : 'max-h-0 pt-0 pb-0 overflow-hidden border-white/0'} text-white flex flex-col text-center gap-8 fixed bg-primary-200 w-full left-0 top-[120px] text-base uppercase font-medium transition-all xl:hidden`}

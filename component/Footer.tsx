@@ -1,5 +1,4 @@
 'use client'
-import Image from 'next/image'
 import Link from 'next/link'
 import {Link as ScrollLink} from 'react-scroll'
 import {useState, useRef, useEffect} from 'react'
@@ -167,11 +166,11 @@ const Footer = () => {
                             activeClass='active'
                             className='cursor-pointer hover:text-accent transition-all'
                         >
-                            <Image
-                                src={'/assets/img/MTM.svg'}
-                                alt={'logo'}
-                                width={400}
-                                height={200}
+                            <img src='/assets/img/MTM.svg'
+                            alt='logo'
+                            width={400}
+                            height={200}
+
                             />
                         </ScrollLink>
                         <p className='max-w-sm'>

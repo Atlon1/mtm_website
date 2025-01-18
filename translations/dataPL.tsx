@@ -15,7 +15,7 @@ export const linksPL : linksType[] = [
     {name: 'O nas', target: 'about', offset: -81},
     {name: 'Usługi', target: 'prices', offset: -41},
     {name: 'Marki', target: 'brands', offset: -81},
-    {name: 'Czym sie zajmujemy', target: 'classes', offset: -81},
+    {name: 'Czym się zajmujemy', target: 'classes', offset: -81},
     {name: 'Kontakt', target: 'contact', offset: -101},
 ]
 
@@ -53,7 +53,7 @@ type featuresType = {
 export const featuresAboutPL : featuresType[]  = [
     {
         icon: FaUsers,
-        title: "Wykflaifikowani inżynierowie",
+        title: "Wykwalifikowani inżynierowie",
         subtitle: "Ludzie z bogatym doświadczeniem doradzą w każdej kwestii pod kątem optymalizacji, kosztów oraz zaproponują najlepsze dla Ciebie rozwiązanie.",
     },
     {
@@ -223,6 +223,6 @@ export const contactPl = {
 }
 export const contactUsPl = {
     description: "Zapraszamy do współpracy!",
-    sendbtn: "Wyslij wiadomość!",
+    sendbtn: "Wyślij wiadomość!",
     placeholder: "Imię i nazwisko"
 }
