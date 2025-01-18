@@ -166,7 +166,7 @@ const Footer = () => {
                             activeClass='active'
                             className='cursor-pointer hover:text-accent transition-all'
                         >
-                            <img src='/assets/img/MTM.svg'
+                            <img src='/assets/img/mtm.svg'
                             alt='logo'
                             width={400}
                             height={200}
