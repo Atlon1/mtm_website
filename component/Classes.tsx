@@ -33,11 +33,11 @@ const Classes = () => {
                             className="relative w-full h-[300px] lg:h-[485px] flex flex-col justify-center items-center"
                         >
                             <div className="bg-black/70 absolute w-full h-full top-0 z-10"></div>
-                            <Image
+
+                            <img
                                 src={item.img}
                                 alt={item.name}
-                                fill
-                                className="object-cover"
+                                className="absolute w-full h-full object-cover"
                             />
                             <div className="z-30 max-w-[380px] text-center flex flex-col items-center justify-center gap-4">
                                 <motion.h3

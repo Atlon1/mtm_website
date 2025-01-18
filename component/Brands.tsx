@@ -64,13 +64,8 @@ const Brands = () => {
                                 className="group grayscale"
                                 href="/"
                             >
-                                <Image
-                                    className="opacity-50 group-hover:opacity-100 transition-all mx-auto duration-300 h-[80px]"
-                                    src={item.src}
-                                    alt={item.alt}
-                                    width={205}
-                                    height={106}
-                                />
+                                <img className='w-[205px] h-[106px]' src={item.src} alt={item.alt} />
+
                             </Link>
                         </motion.div>
                     ))}

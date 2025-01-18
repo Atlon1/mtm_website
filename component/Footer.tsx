@@ -204,7 +204,7 @@ const Footer = () => {
                     <motion.div
                         variants={footerItemVariants}
                         className='flex flex-col'>
-                        <h2>{contactUs.title}</h2>
+                        <h2>{contactUs.description}</h2>
                         <form
                             className='flex-1 rounded-2xl flex flex-col gap-y-6 items-start'
                             ref={formData}
