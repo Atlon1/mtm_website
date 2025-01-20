@@ -20,8 +20,17 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://www.mtm-precision.pl"),
     title: "MTM Precision Solutions",
     description: "Welcome to MTM Precision Solutions",
+    openGraph: {
+        title: "MTM Precision Solutions",
+        description: "Welcome to MTM Precision Solutions",
+        url: "https://www.mtm-precision.pl",
+        type: "website",
+        locale: "pl-PL",
+        siteName: "Miiling Team",
+    }
 };
 
 

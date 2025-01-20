@@ -8,6 +8,9 @@ import MemberShip from "../component/MemberShip";
 import Brands from "../component/Brands";
 
 
+
+
+
 export default function Home() {
     return (
         <main>
