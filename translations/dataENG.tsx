@@ -194,7 +194,7 @@ export const brands = [{
         alt: '/'
     },
     {
-        src: '/assets/img/brands/Brand-3.jpg',
+        src: '/assets/img/brands/brand-3.jpg',
         alt: '/'
     },
     {
