@@ -228,3 +228,5 @@ export const contactUsENG = {
     sendbtn:"Send message!",
     placeholder: "Name and surname"
 }
+
+export const portfolioENG = "Portfolio"

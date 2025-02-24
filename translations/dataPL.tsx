@@ -226,3 +226,5 @@ export const contactUsPl = {
     sendbtn: "Wyślij wiadomość!",
     placeholder: "Imię i nazwisko"
 }
+
+export const portfolioPl = "Portfolio"
