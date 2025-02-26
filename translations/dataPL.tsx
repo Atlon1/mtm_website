@@ -279,4 +279,21 @@ export const portfolioAssetsPL = [{
     {
         src: '/assets/img/portfolio/a13.jpg',
         alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a14.jpg',
+        alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a15.jpg',
+        alt: 'Portfolio Item'
+    },{
+        src: '/assets/img/portfolio/a16.jpg',
+        alt: 'Portfolio Item'
+    },{
+        src: '/assets/img/portfolio/a17.jpg',
+        alt: 'Portfolio Item'
+    },{
+        src: '/assets/img/portfolio/a18.jpg',
+        alt: 'Portfolio Item'
     }]

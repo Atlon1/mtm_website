@@ -12,16 +12,12 @@ import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import { portfolioAssetsPL } from "../translations/dataPL";
 
 const PortfolioSlider = () => {
-    const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
         <>
             <Swiper
-                style={{
-                    '--swiper-navigation-color': '#fff',
-                    '--swiper-pagination-color': '#fff',
-                }}
                 spaceBetween={10}
                 navigation={true}
                 thumbs={{ swiper: thumbsSwiper }}
