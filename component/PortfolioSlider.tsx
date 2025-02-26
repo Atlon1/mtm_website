@@ -1,103 +1,67 @@
 'use client'
 
-import {Swiper, SwiperSlide} from 'swiper/react';
-
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-
 import 'swiper/css/pagination';
-import CustomButton from "./CustomButton";
-import {motion} from 'framer-motion';
-import {fadeIn} from "../lib/variants";
-import {Autoplay} from "swiper/modules";
-import {heroDataPL} from "../translations/dataPL";
-import {heroDataENG} from "../translations/dataENG";
-import {Link as ScrollLink} from 'react-scroll'
-import {useEffect, useState} from "react";
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
+import { Autoplay } from "swiper/modules";
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import { portfolioAssetsPL } from "../translations/dataPL";
 
-type HeroDataItem = {
-    title: string
-    subtitle: string
-    text: string
-}
-
-type HeroData = HeroDataItem[]
-
-const HeroSlider = () => {
-
- const [HeroDataLang, setHeroDataLang] = useState<HeroData>([])
-
-    useEffect(() => {
-        if (localStorage.getItem('lang') === null) {
-            localStorage.setItem('lang', 'pl')
-        }
-        if (localStorage.getItem('lang') === 'eng') {
-            setHeroDataLang(heroDataENG)
-        } else {
-            setHeroDataLang(heroDataPL)
-        }
-    },[])
-
+const PortfolioSlider = () => {
+    const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <Swiper
-          centeredSlides={true}
-          autoplay={{
-            delay: 7000,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Autoplay]}
-            className='h-full'>
-            {HeroDataLang.map((heroData, index) => {
-                return (
-                    <SwiperSlide
-                        key={index}>
-                        <div className='h-full flex justify-end pt-48'>
-                            <div className='flex flex-col items-center lg:items-start lg:max-w-[700px]'>
-                                <motion.h1
-                                    variants={fadeIn('up', 0.4)}
-                                    initial='hidden'
-                                    whileInView={'show'}
-                                    viewport={{once: false, amount: 0.2}}
-                                    className='h1 text-center lg:text-left mb-2'>
-                                    <span className='text-accent'>{heroData.title}</span><br/> {heroData.subtitle}
-                                </motion.h1>
-                                <motion.p
-                                    variants={fadeIn('up', 0.6)}
-                                    initial='hidden'
-                                    whileInView={'show'}
-                                    viewport={{once: false, amount: 0.2}}
-                                    className='text-white italic text-center lg:text-left mb-4'>
-                                    {heroData.text}
-                                </motion.p>
-                                <motion.div
-                                    variants={fadeIn('up', 0.8)}
-                                    initial='hidden'
-                                    whileInView={'show'}
-                                    viewport={{once: false, amount: 0.2}}
-                                >
-                                    <ScrollLink
-                                        offset={-101}
-                                        to='contact'
-                                        smooth
-                                        spy
-                                        activeClass='active'
-                                        className='cursor-pointer hover:text-accent transition-all'
-                                    >
-                                        <CustomButton text={heroData.title} containerStyles='w-[196px] h-[62px]'/>
-                                    </ScrollLink>
-                                </motion.div>
-
-                            </div>
+        <>
+            <Swiper
+                style={{
+                    '--swiper-navigation-color': '#fff',
+                    '--swiper-pagination-color': '#fff',
+                }}
+                spaceBetween={10}
+                navigation={true}
+                thumbs={{ swiper: thumbsSwiper }}
+                autoplay={{
+                    delay: 5000,
+                    disableOnInteraction: false,
+                }}
+                onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+                modules={[FreeMode, Navigation, Thumbs, Autoplay]}
+                className='h-full'>
+                {portfolioAssetsPL.map((portfolio, index) => (
+                    <SwiperSlide key={index}>
+                        <div className='flex flex-col items-center justify-center h-full w-full'>
+                            <img className='w-[405px] h-[405px] border border-accent p-10' src={portfolio.src} alt={portfolio.alt} />
                         </div>
                     </SwiperSlide>
-                )
-            })}
-
-        </Swiper>
+                ))}
+            </Swiper>
+            <Swiper
+                onSwiper={setThumbsSwiper}
+                spaceBetween={5}
+                slidesPerView={4}
+                freeMode={true}
+                watchSlidesProgress={true}
+                autoplay={{
+                    delay: 5000,
+                    disableOnInteraction: false,
+                }}
+                modules={[FreeMode, Navigation, Thumbs, Autoplay]}
+                className='h-full w-full max-w-[500px]'>
+                {portfolioAssetsPL.map((portfolio, index) => (
+                    <SwiperSlide key={index}>
+                        <div className={`flex flex-col items-center justify-center mt-2 ${index === activeIndex ? 'opacity-100' : 'opacity-40'}`}>
+                            <img className='w-[105px] h-[105px]' src={portfolio.src} alt={portfolio.alt} />
+                        </div>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+        </>
     );
 };
 
-export default HeroSlider;
+export default PortfolioSlider;

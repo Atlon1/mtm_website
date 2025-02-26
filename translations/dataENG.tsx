@@ -230,3 +230,55 @@ export const contactUsENG = {
 }
 
 export const portfolioENG = "Portfolio"
+
+export const portfolioAssetsENG = [{
+    src: '/assets/img/portfolio/a1.jpg',
+    alt: 'Portfolio Item'
+},
+    {
+        src: '/assets/img/portfolio/a2.jpg',
+        alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a3.jpg',
+        alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a4.jpg',
+        alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a5.jpg',
+        alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a6.jpg',
+        alt: 'Portfolio Item'
+    }, {
+        src: '/assets/img/portfolio/a7.jpg',
+        alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a8.jpg',
+        alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a9.jpg',
+        alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a10.jpg',
+        alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a11.jpg',
+        alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a12.jpg',
+        alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a13.jpg',
+        alt: 'Portfolio Item'
+    }]

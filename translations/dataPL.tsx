@@ -10,7 +10,7 @@ type linksType = {
     target: string
     offset: number
 }
-export const linksPL : linksType[] = [
+export const linksPL: linksType[] = [
     {name: 'Start', target: 'home', offset: -101},
     {name: 'O nas', target: 'about', offset: -81},
     {name: 'Usługi', target: 'prices', offset: -41},
@@ -43,14 +43,14 @@ export const heroDataPL = [{
 ]
 
 export const AboutStatsPL1 = 'O nas'
-export const  AboutStatsPL2=    'Choć nasza firma jest młoda, nasz zespół składa się z doświadczonych specjalistów z wieloletnim stażem w branży. Oferujemy usługi w zakresie obróbki stali, aluminium, w tym frezowanie, toczenie i szlifowanie.'
+export const AboutStatsPL2 = 'Choć nasza firma jest młoda, nasz zespół składa się z doświadczonych specjalistów z wieloletnim stażem w branży. Oferujemy usługi w zakresie obróbki stali, aluminium, w tym frezowanie, toczenie i szlifowanie.'
 type featuresType = {
     icon: IconType
     title: string
     subtitle: string
 }
 
-export const featuresAboutPL : featuresType[]  = [
+export const featuresAboutPL: featuresType[] = [
     {
         icon: FaUsers,
         title: "Wykwalifikowani inżynierowie",
@@ -228,3 +228,55 @@ export const contactUsPl = {
 }
 
 export const portfolioPl = "Portfolio"
+
+export const portfolioAssetsPL = [{
+    src: '/assets/img/portfolio/a1.jpg',
+    alt: 'Portfolio Item'
+},
+    {
+        src: '/assets/img/portfolio/a2.jpg',
+        alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a3.jpg',
+        alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a4.jpg',
+        alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a5.jpg',
+        alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a6.jpg',
+        alt: 'Portfolio Item'
+    }, {
+        src: '/assets/img/portfolio/a7.jpg',
+        alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a8.jpg',
+        alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a9.jpg',
+        alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a10.jpg',
+        alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a11.jpg',
+        alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a12.jpg',
+        alt: 'Portfolio Item'
+    },
+    {
+        src: '/assets/img/portfolio/a13.jpg',
+        alt: 'Portfolio Item'
+    }]
